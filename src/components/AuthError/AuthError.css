@@ -1,0 +1,15 @@
+/* CSS стили для auth__error */
+
+.auth__error {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #EE3465;
+  text-align: left;
+  box-sizing: border-box;
+}

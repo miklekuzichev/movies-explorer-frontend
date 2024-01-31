@@ -1,0 +1,8 @@
+/* CSS стили для header__logo */
+
+.header__logo {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  max-width: 38px;
+  min-height: 38px;
+}

@@ -1,0 +1,35 @@
+/* CSS стили для header */
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  background: #073042;
+}
+
+/* CSS стили для header__color-black */
+
+.header__color-black {
+  background: #202020;
+}
+
+/* CSS стили для header__container */
+
+.header__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1184px) {
+  .header__container {
+    max-width: 710px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__container {
+    max-width: 284px;
+  }
+}

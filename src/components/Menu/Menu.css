@@ -1,0 +1,83 @@
+/* CSS стили для menu__modal */
+
+.menu__modal {
+    display: none;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .menu__modal {
+      display: block;
+      box-sizing: border-box;
+    }
+  
+    .menu__modal::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000000;
+      opacity: 0.3;
+      transition: opacity 3s ease;
+    }
+
+  /* CSS стили для menu__modal */
+    
+    .menu__modal-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100vh;
+    }
+  
+    .menu__modal-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 22px 22px 92px 22px;
+      background: #202020;
+      box-sizing: border-box;
+    }
+  
+    .menu__modal-header {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 270px;
+    }
+  
+    .menu__modal-main {
+      flex: 2 790px;
+    }
+  
+    .menu__modal-footer {
+      align-self: center;
+    }
+  
+    .menu__modal_close-button {
+      width: 22px;
+      height: 22px;
+      background-color: unset;
+      background-image: url(../../images/Modal/close-icon.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      border: unset;
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .menu__modal-container {
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100vh;
+    }
+  
+    .menu__modal-content {
+      padding: 13px 13px 48px 13px;
+    }
+  }
+  

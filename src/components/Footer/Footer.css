@@ -1,0 +1,150 @@
+/* CSS стили для footer */
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  background: #202020;
+}
+
+/* CSS стили для footer__container */
+
+.footer__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: #202020;
+}
+
+@media screen and (max-width: 1184px) {
+  .footer__container {
+    max-width: 708px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__container {
+    max-width: 300px;
+  }
+}
+
+/* CSS стили для footer__text */
+
+.footer__text {
+  margin: 0 auto 20px auto;
+  padding-top: 79px;
+  max-width: 320px;
+  color: #8B8B8B;
+  text-align: center;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__text {
+    padding-top: 61px;
+    max-width: 300px;
+    font-size: 12px;
+  }
+}
+
+/* CSS стили для footer__links-container */
+
+.footer__links-container {
+  max-width: 1140px;
+  min-height: 56px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px #424242;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__links-container {
+    max-width: 300px;
+    padding-top: 28px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+/* CSS стили для footer__copyright */
+
+.footer__copyright {
+  max-width: 186px;
+  margin: 0;
+  text-align: center;
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__copyright {
+    padding-top: 29px;
+    padding-bottom: 20px;
+    color: #8B8B8B;
+    font-size: 12px;
+  }
+}
+
+/* CSS стили для footer__links */
+
+.footer__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;  
+}
+
+@media screen and (max-width: 750px) {
+  .footer__links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 32px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__links {
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* CSS стили для footer__link */
+
+.footer__link {
+  width: 100%;
+  margin: 0;
+  margin-left: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  font-family: 'Inter';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+  
+.footer__link:hover {
+  opacity: 0.8;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__link {
+    margin: 0;
+    font-size: 12px;
+  }
+}

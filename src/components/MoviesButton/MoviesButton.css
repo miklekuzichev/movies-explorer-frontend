@@ -1,0 +1,62 @@
+/* CSS стили для films__container-button */
+
+.films__container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    width: 100px;
+    height: 29px;
+    border-radius: 30px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px; /* 91.667% */
+    border: none;
+  }
+
+  .films__container-button-save{
+    background: #313131;
+  }
+
+  .films__container-button-active{
+    background: #EE3465;
+  }
+
+  .films__container-button:hover {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 378px) {
+    .films__container-button {  
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+  }
+  
+  .films__button {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .films__button-saved{
+    width: 11px;
+    height: 11px;
+    background-image: url(../../images/Movies/icon_saved.svg);
+  }
+
+  .films__button-deleted{
+    width: 8px;
+    height: 8px;
+    background-image: url(../../images/Movies/icon_deleted.svg);
+  }
+
+  .films__button-hide{
+    display: none;
+  }

@@ -1,0 +1,158 @@
+/* CSS стили для profile__form */
+
+.profile__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 410px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* CSS стили для profile__form-title */
+
+.profile__form-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 54px 0 100px 0;
+  max-width: 410px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* CSS стили для profile__form_input-fieldset */
+
+.profile__form_input-fieldset {
+  margin: 0;
+  padding: 0;
+  border: unset;
+  flex: 1;
+}
+
+/* CSS стили для profile__form_input-container */
+
+.profile__form_input-container {
+  margin-bottom: 14px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #424242;
+}
+
+.profile__form_input-container:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  border-bottom: unset;
+}
+
+/* CSS стили для profile__form_input-label */
+
+.profile__form_input-label {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 13.3px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* CSS стили для profile__form-input */
+
+.profile__form-input {
+  margin: 0;
+  padding: 3px;
+  width: 80%;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1.18;
+  color: #fff;
+  background: unset;
+  text-align: right;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* CSS стили для profile__form-container */
+
+.profile__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 252px;
+}
+
+/* CSS стили для profile__form_input-error */
+
+.profile__form_input-error {
+  text-align: left;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #EE3465;
+}
+
+/* CSS стили для profile__form_submit-button */
+
+.profile__form_submit-button {
+  width: 100%;
+  padding: 14px 0;
+  text-align: center;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.21;
+  cursor: pointer;
+  border: unset;
+  border-radius: 3px;
+  color: #FFFFFF;
+  background: rgba(66, 133, 244, 1);
+  transition: all 0.3s ease;
+}
+
+.profile__form_submit-button:hover {
+  background: rgba(66, 133, 244, 0.8);
+}
+
+.profile__form_submit-button:disabled {
+  cursor: not-allowed;
+  background: #F8F8F8;
+  color: #C2C2C2;
+}
+
+@media screen and (max-width: 1023px) {
+  .profile__form_buttons-container {
+    flex-basis: 242px;
+  }
+
+  .profile__form-title {
+    padding-top: 216px;
+    padding-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .profile__form-container {
+    flex-basis: 397px;
+  }
+
+  .profile__form-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
