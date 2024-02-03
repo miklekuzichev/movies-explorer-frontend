@@ -1,6 +1,6 @@
-/* CSS стили для films__container-button */
+/* CSS стили для films-container__button */
 
-.films__container-button {
+.films-container__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,20 +21,20 @@
     border: none;
   }
 
-  .films__container-button-save{
+  .films-container__button_save{
     background: #313131;
   }
 
-  .films__container-button-active{
+  .films-container__button_active{
     background: #EE3465;
   }
 
-  .films__container-button:hover {
+  .films-container__button:hover {
     cursor: pointer;
   }
   
   @media screen and (max-width: 378px) {
-    .films__container-button {  
+    .films-container__button {  
         margin-top: 14px;
         margin-bottom: 14px;
     }
@@ -45,18 +45,18 @@
     background-repeat: no-repeat;
   }
 
-  .films__button-saved{
+  .films__button_saved{
     width: 11px;
     height: 11px;
     background-image: url(../../images/Movies/icon_saved.svg);
   }
 
-  .films__button-deleted{
+  .films__button_deleted{
     width: 8px;
     height: 8px;
     background-image: url(../../images/Movies/icon_deleted.svg);
   }
 
-  .films__button-hide{
+  .films__button_hide{
     display: none;
   }

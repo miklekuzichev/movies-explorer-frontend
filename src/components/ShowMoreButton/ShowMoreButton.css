@@ -1,6 +1,6 @@
-/* CSS стили для films__button */
+/* CSS стили для films__more_button */
 
-.films__button {
+.films__more_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,25 +23,25 @@
   letter-spacing: 0.2px;
 }
 
-.films__button:hover {
+.films__more_button:hover {
   cursor: pointer;
 } 
 
 @media screen and (max-width: 1184px) {
-  .films__button {  
+  .films__more_button {  
     max-width: 668px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .films__button {  
+  .films__more_button {  
       margin-top: 70px;
       max-width: 708px;
   }
 }
 
 @media screen and (max-width: 378px) {
-  .films__button {  
+  .films__more_button {  
       max-width: 300px;
   }
 }

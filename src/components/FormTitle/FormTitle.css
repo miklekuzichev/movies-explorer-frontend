@@ -1,8 +1,8 @@
-/* CSS стили для form__title */
+/* CSS стили для form-title */
 
-.form__title {
+.form-title {
     margin: 0;
-    padding: 20px 0;
+    padding: 18px 0;
     font-family: 'Inter', 'Arial', 'sans-serif';
     font-weight: 500;
     font-style: normal;
@@ -13,9 +13,9 @@
   }
   
   @media screen and (max-width: 767px) {
-    .form__title {
-      padding-top: 50px;
-      padding-bottom: 50px;
+    .form-title {
+      padding-top: 46px;
+      padding-bottom: 58px;
     }
   }
   

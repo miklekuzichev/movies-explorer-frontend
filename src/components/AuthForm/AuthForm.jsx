@@ -27,18 +27,18 @@ function AuthForm({
   const formInputsMarkup = inputsData.map((item) => (
     <div
       key={item.key}
-      className='auth__form_input-container'>
-      <label className='auth__form_input-label'>
+      className='auth-form__input_container'>
+      <label className='auth-form__input_label'>
         {item.label}
         <InputField
-          className='auth__form_input'
+          className='auth-form__input'
           settings={item}
           onChange={onChange}
           value={values[item.name]}
         />
       </label>
       <span
-        className='auth__form_input-error'
+        className='auth-form__input_error'
         aria-live="polite">
         {item.regexp && errors[item.name] && item.customErrorMessage}
         {errors[item.name]}
@@ -49,16 +49,16 @@ function AuthForm({
   return (
     <form
       onSubmit={onSubmit}
-      className='auth__form'
+      className='auth-form'
       noValidate>
-      <div className='auth__form-title'>
+      <div className='auth-form__title'>
         <Logo />
         <FormTitle
           titleText={titleText}
         />
       </div>
       <fieldset
-        className='auth__form_input-fieldset'
+        className='auth-form__input_fieldset'
         disabled={isLoadingData}>
         {formInputsMarkup}
         {isAuthError && (
@@ -68,11 +68,11 @@ function AuthForm({
         )}
 
       </fieldset>
-      <div className='auth__form_button-container'>
+      <div className='auth-form__button_container'>
         <SubmitButton
           disabled={!formIsValid || isLoadingData}
           settings={submitButtonSettings}
-          className='auth__form_submit-button'
+          className='auth-form__submit_button'
         />
         <FormAuthQuestion
           settings={formAuthQuestionSettings}

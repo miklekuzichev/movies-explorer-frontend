@@ -27,6 +27,35 @@
   }
 }
 
+/* CSS стили для technologies__title_container */
+
+.technologies__title_container {
+  min-width: 1140px;
+  margin: 0 auto;
+  padding-top: 78px;
+  border-bottom: solid 1px #DADADA;
+}
+
+
+@media screen and (max-width: 1184px) {
+  .technologies__title_container {
+    max-width: 668px;
+    min-width: auto;
+    padding-top: 67px;  
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .technologies__title_container {
+    max-width: 284px;
+    padding-top: 47px; 
+  }
+
+  .technologies__title_container:nth-child(odd) {
+    border-bottom: solid 1px #000000;
+  }
+}
+
 /* CSS стили для technologies__title */
 
 .technologies__title {
@@ -90,9 +119,9 @@
   }
 }
 
-/* CSS стили для technologies__card-container */
+/* CSS стили для technologies__card_container */
 
-.technologies__card-container {
+.technologies__card_container {
   margin: 0 auto;
   padding-bottom: 100px;
   display: flex;
@@ -103,20 +132,20 @@
 }
 
 @media screen and (max-width: 1184px) {
-  .technologies__card-container {
+  .technologies__card_container {
     padding-bottom: 90px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .technologies__card-container {
+  .technologies__card_container {
     padding-bottom: 70px;
     flex-wrap: wrap;
     max-width: 178px;
     background: #202020;
   }
 
-  .technologies__card-container:last-child {
+  .technologies__card_container:last-child {
     justify-content: left;
   }
 }
@@ -158,9 +187,9 @@
   }
 }
 
-/* CSS стили для technologies__card-text */
+/* CSS стили для technologies__card_text */
 
-.technologies__card-text {
+.technologies__card_text {
   margin: 0;
   display: inline-block;
   color: #FFF;
@@ -174,10 +203,8 @@
 }
 
 @media screen and (max-width: 1184px) {
-
-.technologies__card-text {
-  font-size: 12px;
-  letter-spacing: -0.48px;
+  .technologies__card_text {
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
 }
-}
-

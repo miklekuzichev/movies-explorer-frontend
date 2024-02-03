@@ -2,8 +2,11 @@ import React from 'react';
 import ProfileForm from '../ProfileForm/ProfileForm';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 import useFormWithValidation from '../../hooks/useFormValidation';
+import Header from '../Header/Header';
 
 function Profile({
+  loggedIn,
+  setOpenMenu,
   onSignOut,
   onUpdateCurrentUser,
   isLoadingUpdateCurrentUser,
@@ -14,6 +17,9 @@ function Profile({
   const [updateErrorText, setUpdateUserProfileErrorText] = React.useState('');
   const [formIsValid, setFormValid] = React.useState(false);
 
+  const headerClass = 'header header__color_black';
+  const headerAccountIconClass = 'header__account_icon_background header__account_icon_background_gray';
+  
   const {
     values,
     errors,
@@ -66,7 +72,8 @@ function Profile({
     },
   ];
 
-  const TITLE_TEXT = `Привет, ${currentUserData.name || ''}!`;
+//  const TITLE_TEXT = `Привет, ${currentUserData.name || ''}!`;
+  const TITLE_TEXT = `Привет, Пользователь!`;
 
   React.useEffect(() => {
     if (currentUserData) {
@@ -85,6 +92,13 @@ function Profile({
   }, [currentUserData, values])
 
   return (
+    <>
+    <Header
+            loggedIn={loggedIn}
+            onOpenMenu={setOpenMenu}
+            className={headerClass}
+            classNameIcon={headerAccountIconClass}
+    />
     <main
       className='profile'
     >
@@ -107,6 +121,7 @@ function Profile({
         isLoadingData={isLoadingUpdateCurrentUser}
       />
     </main>
+    </>
   )
 }
 

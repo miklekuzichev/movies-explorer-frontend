@@ -29,17 +29,17 @@ function ProfileForm({
   const formInputs = inputsData.map((item) => (
     <div
       key={item.key}
-      className='profile__form_input-container'>
-      <label className='profile__form_input-label'>
+      className='profile__form_input_container'>
+      <label className='profile__form_input_label'>
         {item.label}
         <InputField
-          className='profile__form-input'
+          className='profile__form_input'
           settings={item}
           onChange={onChange}
           value={values[item.name]}/>
       </label>
       <span
-        className='profile__form_input-error'>
+        className='profile__form_input_error'>
         {errors[item.name]}
       </span>
     </div>
@@ -50,17 +50,17 @@ function ProfileForm({
       onSubmit={onSubmit}
       className='profile__form'
       noValidate>
-      <div className='profile__form-title'>
+      <div className='profile__form_title'>
         <FormTitle
           titleText={titleText}
         />
       </div>
       <fieldset
-        className='profile__form_input-fieldset'
+        className='profile__form_input_fieldset'
         disabled={isLoadingData || !isEdited}>
         {formInputs}
       </fieldset>
-      <div className='profile__form-container'>
+      <div className='profile__form_container'>
         {isUpdateUserProfileError && (
           <ProfileUpdateError 
           errorText={profileUpdateErrorText}/>
@@ -69,7 +69,7 @@ function ProfileForm({
           <SubmitButton
             disabled={!formIsValid}
             settings={submitButtonSettings}
-            className='profile__form_submit-button'/>
+            className='profile__form_submit_button'/>
         ) : (
           <>
             {isLoadingData && (

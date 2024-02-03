@@ -59,9 +59,9 @@
   }
 }
 
-/* CSS стили для header__account-text */
+/* CSS стили для header__account_text */
 
-.header__account-text {  
+.header__account_text {  
   padding-right: 14px;
   color: #FFF;
   font-family: 'Inter';
@@ -72,30 +72,30 @@
   text-decoration: none;
 }
 
-/* CSS стили для header__account-icon-background */
+/* CSS стили для header__account_icon_background */
 
-.header__account-icon-background {  
+.header__account_icon_background {  
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 6px;
 }
 
-/* CSS стили для header__account-icon-background-blue */
+/* CSS стили для header__account_icon_background_blue */
 
-.header__account-icon-background-blue {  
+.header__account_icon_background_blue {  
   background: #0F4157;
 }
 
-/* CSS стили для header__account-icon-background-gray */
+/* CSS стили для header__account_icon_background_gray */
 
-.header__account-icon-background-gray {  
+.header__account_icon_background_gray {  
   background: #313131;
 }
 
-/* CSS стили для header__account-icon */
+/* CSS стили для header__account_icon */
 
-.header__account-icon {  
+.header__account_icon {  
   position: absolute;
   inset: 30%;
   width: 10px;

@@ -5,7 +5,7 @@ function RouteLink({ linkPath, linkTitle }) {
 
   return (
     <Link
-      className='route__link'
+      className='route-link'
       to={linkPath}>
       {linkTitle}
     </Link>

@@ -5,7 +5,7 @@ function FormTitle({
 }) {
 
   return (
-    <h1 className='form__title'>
+    <h1 className='form-title'>
       {titleText}
     </h1>
   )

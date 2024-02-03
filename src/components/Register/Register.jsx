@@ -64,6 +64,10 @@ function Register({
     linkPath: '/signin',
   };
 
+  const QUESTION_TEXT = {
+    questionText: 'Уже зарегистрированы?',
+  };
+
   return (
     <main
       className='register'
@@ -75,7 +79,7 @@ function Register({
         values={values}
         errors={errors}
         submitButtonSettings={SUBMIT_BUTTON_SETTINGS}
-        formAuthQuestionSettings='Уже зарегистрированы?'
+        formAuthQuestionSettings={QUESTION_TEXT}
         routeLinkSettings={ROUTE_LINK_SETTINGS}
         formIsValid={isValid}
         authErrorText={registrationErrorText}

@@ -1,16 +1,16 @@
-/* CSS стили для menu__modal */
+/* CSS стили для menu-modal */
 
-.menu__modal {
+.menu-modal {
     display: none;
   }
   
   @media screen and (max-width: 800px) {
-    .menu__modal {
+    .menu-modal {
       display: block;
       box-sizing: border-box;
     }
   
-    .menu__modal::before {
+    .menu-modal::before {
       content: '';
       position: fixed;
       top: 0;
@@ -22,9 +22,9 @@
       transition: opacity 3s ease;
     }
 
-  /* CSS стили для menu__modal */
+  /* CSS стили для menu-modal__container */
     
-    .menu__modal-container {
+    .menu-modal__container {
       position: fixed;
       top: 0;
       right: 0;
@@ -32,7 +32,7 @@
       height: 100vh;
     }
   
-    .menu__modal-content {
+    .menu-modal__content {
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -41,21 +41,21 @@
       box-sizing: border-box;
     }
   
-    .menu__modal-header {
+    .menu-modal__header {
       display: flex;
       justify-content: flex-end;
       flex: 1 270px;
     }
   
-    .menu__modal-main {
+    .menu-modal__main {
       flex: 2 790px;
     }
   
-    .menu__modal-footer {
+    .menu-modal__footer {
       align-self: center;
     }
   
-    .menu__modal_close-button {
+    .menu-modal__close_button {
       width: 22px;
       height: 22px;
       background-color: unset;
@@ -68,7 +68,7 @@
   }
   
   @media screen and (max-width: 767px) {
-    .menu__modal-container {
+    .menu-modal__container {
       top: 0%;
       left: 50%;
       transform: translateX(-50%);
@@ -76,7 +76,7 @@
       height: 100vh;
     }
   
-    .menu__modal-content {
+    .menu-modal__content {
       padding: 13px 13px 48px 13px;
     }
   }

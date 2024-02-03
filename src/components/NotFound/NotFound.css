@@ -1,8 +1,7 @@
-/* CSS стили для not__found */
+/* CSS стили для not-found */
 
-.not__found {
-    min-height: 580px;
-    padding-bottom: 60px;
+.not-found {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,17 +9,18 @@
     background: #202020;
   }
   
-/* CSS стили для not__found-container */
+/* CSS стили для not-found__container */
 
-  .not__found-container {
+  .not-found__container {
     display: flex;
     flex-direction: column;
     margin: auto;
+    padding-top: 181px;
   }
   
-/* CSS стили для not__found-title */
+/* CSS стили для not-found__title */
 
-  .not__found-title {
+  .not-found__title {
     max-width: 400px;
     margin: 0 0 5px 0;
     font-family: 'Inter', 'Arial', 'sans-serif';
@@ -32,9 +32,9 @@
     color: #fff;
   }
  
-/* CSS стили для not__found-subtitle */
+/* CSS стили для not-found__subtitle */
 
-  .not__found-subtitle {
+  .not-found__subtitle {
     max-width: 400px;
     margin: 0;
     font-family: 'Inter', 'Arial', 'sans-serif';
@@ -46,10 +46,11 @@
     color: #fff;
   }
 
-/* CSS стили для not__found_go-back-button */
+/* CSS стили для not-found__go-back_button */
 
-  .not__found_go-back-button {
+  .not-found__go-back_button {
     margin: 0 auto;
+    padding-top: 184px;
     font-family: 'Inter', 'Arial', 'sans-serif';
     line-height: 17px;
     color: #4285F4;
@@ -64,34 +65,34 @@
     font-size: 14px;
   }
   
-  .not__found_go-back-button:hover {
+  .not-found__go-back_button:hover {
     opacity: .8;
   }
   
   @media screen and (max-width: 1023px) {
-    .not__found {
+    .not-found {
       min-height: calc(100vh - 222px);
       padding-bottom: 222px;
     }
   }
   
   @media screen and (max-width: 767px) {
-    .not__found {
+    .not-found {
       min-height: calc(100vh - 30px);
       padding-bottom: 30px;
     }
   
-    .not__found-title {
+    .not-found__title {
       font-size: 80px;
       line-height: 1.21;
     }
   
-    .not__found-subtitle {
+    .not-found__subtitle {
       font-size: 12px;
       line-height: 1.25;
     }
   
-    .not__found_go-back-button {
+    .not-found__go-back_button {
       font-size: 12px;
       line-height: 1.25;
     }

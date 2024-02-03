@@ -9,34 +9,34 @@ function Techs() {
   return (
     <section className="technologies">
                 <div className="technologies__container">
-                    <div className="intro__title-container">
+                    <div className="technologies__title_container">
                         <h2 className="intro__title">{INTRO_TITLE_TEXT}</h2>
                     </div>
 
                     <h2 className="technologies__title">{TECHNOLOGIES_TITLE_TEXT}</h2>
                     <p className="technologies__subtitle">{TECHNOLOGIES_SUBTITLE_TEXT}</p>
 
-                    <div className="technologies__card-container">
+                    <div className="technologies__card_container">
                         <div className="technologies__card">
-                            <p className="technologies__card-text">HTML</p>
+                            <p className="technologies__card_text">HTML</p>
                         </div>
                         <div className="technologies__card">
-                            <p className="technologies__card-text">CSS</p>
+                            <p className="technologies__card_text">CSS</p>
                         </div>
                         <div className="technologies__card">
-                            <p className="technologies__card-text">JS</p>
+                            <p className="technologies__card_text">JS</p>
                         </div>
                         <div className="technologies__card">
-                            <p className="technologies__card-text">React</p>
+                            <p className="technologies__card_text">React</p>
                         </div>
                         <div className="technologies__card">
-                            <p className="technologies__card-text">Git</p>
+                            <p className="technologies__card_text">Git</p>
                         </div>
                         <div className="technologies__card">
-                            <p className="technologies__card-text">Express.js</p>
+                            <p className="technologies__card_text">Express.js</p>
                         </div>
                         <div className="technologies__card">
-                            <p className="technologies__card-text">mongoDB</p>
+                            <p className="technologies__card_text">mongoDB</p>
                         </div>
                     </div>
                 </div>

@@ -80,7 +80,7 @@
 
   /* CSS стили для modal__close-button */
 
-  .modal__close-button {
+  .modal__close_button {
     width: 22px;
     height: 22px;
     background-color: unset;

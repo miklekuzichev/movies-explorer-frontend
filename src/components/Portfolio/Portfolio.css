@@ -1,46 +1,46 @@
-/* CSS стили для student__portfolio-links */
+/* CSS стили для student__portfolio_links */
 
-.student__portfolio-links {
+.student__portfolio_links {
     margin: 0;
     padding-bottom: 86px;
 }
 
 @media screen and (max-width: 1184px) {
-    .student__portfolio-links {
+    .student__portfolio_links {
         padding-bottom: 52px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .student__portfolio-links {
+    .student__portfolio_links {
         padding-bottom: 50px;
     }
 }
 
-/* CSS стили для student__portfolio-link */
+/* CSS стили для student__portfolio_link */
 
-.student__portfolio-link {
+.student__portfolio_link {
     margin: 0;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-/* CSS стили для student__portfolio-link_border */
+/* CSS стили для student__portfolio_link_border */
 
-.student__portfolio-link_border {
+.student__portfolio_link_border {
     border-bottom: solid 1px #424242; 
 }
 
 @media screen and (max-width: 700px) {
-    .student__portfolio-link_border {
+    .student__portfolio_link_border {
         border-bottom: solid 1px #E6E6E6;
     }
 }
 
-/* CSS стили для student__portfolio-title */
+/* CSS стили для student__portfolio_title */
 
-.student__portfolio-title {
+.student__portfolio_title {
     margin: 0;
     margin-bottom: 19px;
     max-width: 880px;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 1184px) {
-    .student__portfolio-title {
+    .student__portfolio_title {
         font-size: 28px;
         line-height: 50px; /* 178.571% */
         letter-spacing: -1.12px;
@@ -62,16 +62,16 @@
 }
 
 @media screen and (max-width: 700px) {
-    .student__portfolio-title {
+    .student__portfolio_title {
         font-size: 18px;
         line-height: 28px; /* 155.556% */
         letter-spacing: -0.72px;
     }
 }
 
-/* CSS стили для student__portfolio-arrow */
+/* CSS стили для student__portfolio_arrow */
 
-.student__portfolio-arrow {
+.student__portfolio_arrow {
     margin: 0;
     margin-right: 5px;
     margin-top: 12px;
@@ -84,13 +84,13 @@
 }
 
 @media screen and (max-width: 1184px) {
-    .student__portfolio-arrow {
+    .student__portfolio_arrow {
         width: 17px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .student__portfolio-arrow {
+    .student__portfolio_arrow {
         margin: 0;
         margin-right: 1px;
         width: 17px;
@@ -98,4 +98,3 @@
         background-size: 65%;
     }
 }
-

@@ -8,20 +8,20 @@ const AuthNavigation = React.memo((props) => {
       id: 1,
       title: 'Регистрация',
       link: '/signup',
-      className: 'auth-header__link auth-header__link_color_white',
+      className: 'header__auth_link header__auth_link_color_white',
     },
     {
       id: 2,
       title: 'Войти',
       link: '/signin',
-      className: 'auth-header__link auth-header__link_bgcolor_green',
+      className: 'header__auth_link header__auth_link_bgcolor_green',
     },
   ];
 
   const authNavigationLinksMarkup = AUTH_LINKS.map((item) => (
     <li
       key={item.id}
-      className="auth-header__nav-list-item">
+      className="header__auth_nav_list_item">
       <NavLink
         className={item.className}
         to={item.link}>
@@ -32,8 +32,8 @@ const AuthNavigation = React.memo((props) => {
   ));
 
   return (
-    <nav className="auth-header__links">
-      <ul className="auth-header__nav-list">
+    <nav className="header__auth_links">
+      <ul className="header__auth_nav_list">
         {authNavigationLinksMarkup}
       </ul>
     </nav>

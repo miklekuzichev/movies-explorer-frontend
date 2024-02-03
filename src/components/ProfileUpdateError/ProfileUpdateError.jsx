@@ -4,7 +4,7 @@ function ProfileUpdateError({ errorText }) {
 
   return (
     <span
-      className='profile__update-error'>
+      className='profile__update_error'>
       {errorText}
     </span>
   )

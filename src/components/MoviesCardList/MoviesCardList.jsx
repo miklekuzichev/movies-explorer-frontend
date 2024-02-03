@@ -4,8 +4,8 @@ import ShowMoreButton from '../ShowMoreButton/ShowMoreButton';
 
 function MoviesCardList({
   locationPathname,
-  onSaveMovie,
-  onDeleteSavedMovie,
+  onSaveFilm,
+  onDeleteFilm,
 }) {
 
   const isShowButtonActive = true;
@@ -14,28 +14,28 @@ function MoviesCardList({
     <section className="films" aria-label="Галерея фильмов">
       <div className="films__container">
       <MoviesCard
-        onSaveMovie={onSaveMovie}
-        onDeleteSavedMovie={onDeleteSavedMovie}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
       />
       <MoviesCard
-        onSaveMovie={onSaveMovie}
-        onDeleteSavedMovie={onDeleteSavedMovie}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
       />
       <MoviesCard
-        onSaveMovie={onSaveMovie}
-        onDeleteSavedMovie={onDeleteSavedMovie}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
       />
       <MoviesCard
-        onSaveMovie={onSaveMovie}
-        onDeleteSavedMovie={onDeleteSavedMovie}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
       />
       <MoviesCard
-        onSaveMovie={onSaveMovie}
-        onDeleteSavedMovie={onDeleteSavedMovie}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
       />
       <MoviesCard
-        onSaveMovie={onSaveMovie}
-        onDeleteSavedMovie={onDeleteSavedMovie}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
       />
       </div>
       {locationPathname === '/movies' && isShowButtonActive ? (

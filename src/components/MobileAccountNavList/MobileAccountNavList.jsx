@@ -9,10 +9,10 @@ const MobileAccountNavList = React.memo((props) => {
       id: 1,
       link: '/profile',
       title: 'Аккаунт',
-      className: 'mobile-account-nav__link',
+      className: 'mobile-account__nav_link',
       children: (
         <AccountIcon
-          className="mobile-account-nav__link-icon"
+          className="mobile-account__nav_link_icon"
         />
       ),
     },
@@ -21,7 +21,7 @@ const MobileAccountNavList = React.memo((props) => {
   const mobileAcountLinksMarkup = MOBILE_ACCOUNT_LINKS.map((item) => (
     <li
       key={item.id}
-      className="mobile-account-nav__list-item"
+      className="mobile-account__nav_list_item"
     >
       <Link
         key={item.id}
@@ -39,10 +39,10 @@ const MobileAccountNavList = React.memo((props) => {
 
   return (
     <nav
-      className="mobile-account-nav"
+      className="mobile-account__nav"
     >
       <ul
-        className="mobile-account-nav__list"
+        className="mobile-account__nav_list"
       >
         {mobileAcountLinksMarkup}
       </ul>

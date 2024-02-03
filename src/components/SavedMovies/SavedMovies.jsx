@@ -1,35 +1,41 @@
 import React from 'react';
-import SearchForm from '../SearchForm/SearchForm';
+import { useLocation } from 'react-router-dom';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx';
-import Notification from '../Notification/Notification';
+import SearchForm from '../SearchForm/SearchForm';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 function SavedMovies({
-  onDeleteSavedMovie,
-  savedMovies,
-  isSavedMoviesEmpty,
-  isLoadingData,
-  isNoSavedMoviesFound,
+  loggedIn,
+  onSaveFilm,
+  setOpenMenu,
+  onDeleteFilm,
 }) {
 
-  const [isMoviesApiError, setIsMoviesApiError] = React.useState(false);
-  setIsMoviesApiError(false);
-
+  const location = useLocation();
+  const headerClass = 'header header__color_black';
+  const headerAccountIconClass = 'header__account_icon_background header__account_icon_background_gray';
+  
   return (
+    <>
+    <Header
+            loggedIn={loggedIn}
+            onOpenMenu={setOpenMenu}
+            className={headerClass}
+            classNameIcon={headerAccountIconClass}
+    />
     <main>
-      <SearchForm/>
-      {!isLoadingData && isSavedMoviesEmpty && (
-        <Notification/>
-      )}
-      {!isLoadingData && isNoSavedMoviesFound && (
-        <Notification/>
-      )}
-      {isMoviesApiError && (
-        <Notification/>
-      )}
+      <SearchForm
+        //onSubmit={handleSubmit}
+      />
       <MoviesCardList
-        data={savedMovies}
-        onDeleteSavedMovie={onDeleteSavedMovie}/>
+        locationPathname={location.pathname}
+        onSaveFilm={onSaveFilm}
+        onDeleteFilm={onDeleteFilm}
+      />
     </main>
+    <Footer />
+    </>
   )
 }
 

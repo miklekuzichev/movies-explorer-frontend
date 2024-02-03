@@ -3,13 +3,12 @@ import { Navigate } from 'react-router-dom';
 
 function ProtectedRoute({
   component: Component,
-  loggedIn,
   redirectTo,
   ...props
 }) {
 
   return (
-    loggedIn ? (
+    props.loggedIn ? (
         <Component
           {...props}
         />) : (

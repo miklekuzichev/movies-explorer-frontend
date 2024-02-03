@@ -3,7 +3,6 @@
 .profile__form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 410px;
   width: 100%;
   height: 100%;
@@ -11,45 +10,44 @@
   box-sizing: border-box;
 }
 
-/* CSS стили для profile__form-title */
+/* CSS стили для profile__form_title */
 
-.profile__form-title {
+.profile__form_title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 54px 0 100px 0;
+  padding: 54px 0 105px 0;
   max-width: 410px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* CSS стили для profile__form_input-fieldset */
+/* CSS стили для profile__form_input_fieldset */
 
-.profile__form_input-fieldset {
+.profile__form_input_fieldset {
   margin: 0;
   padding: 0;
   border: unset;
-  flex: 1;
 }
 
-/* CSS стили для profile__form_input-container */
+/* CSS стили для profile__form_input_container */
 
-.profile__form_input-container {
+.profile__form_input_container {
   margin-bottom: 14px;
   padding-bottom: 13px;
   border-bottom: 1px solid #424242;
 }
 
-.profile__form_input-container:last-of-type {
+.profile__form_input_container:last-of-type {
   margin-bottom: 0;
   padding-bottom: 16px;
   border-bottom: unset;
 }
 
-/* CSS стили для profile__form_input-label */
+/* CSS стили для profile__form_input_label */
 
-.profile__form_input-label {
+.profile__form_input_label {
   padding: 0;
   margin: 0;
   display: flex;
@@ -64,9 +62,9 @@
   box-sizing: border-box;
 }
 
-/* CSS стили для profile__form-input */
+/* CSS стили для profile__form_input */
 
-.profile__form-input {
+.profile__form_input {
   margin: 0;
   padding: 3px;
   width: 80%;
@@ -82,19 +80,18 @@
   box-sizing: border-box;
 }
 
-/* CSS стили для profile__form-container */
+/* CSS стили для profile__form_container */
 
-.profile__form-container {
+.profile__form_container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-  flex: 1 252px;
+  padding-top: 196px;
 }
 
-/* CSS стили для profile__form_input-error */
+/* CSS стили для profile__form_input_error */
 
-.profile__form_input-error {
+.profile__form_input_error {
   text-align: left;
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-weight: normal;
@@ -104,9 +101,9 @@
   color: #EE3465;
 }
 
-/* CSS стили для profile__form_submit-button */
+/* CSS стили для profile__form_submit_button */
 
-.profile__form_submit-button {
+.profile__form_submit_button {
   width: 100%;
   padding: 14px 0;
   text-align: center;
@@ -123,33 +120,37 @@
   transition: all 0.3s ease;
 }
 
-.profile__form_submit-button:hover {
+.profile__form_submit_button:hover {
   background: rgba(66, 133, 244, 0.8);
 }
 
-.profile__form_submit-button:disabled {
+.profile__form_submit_button:disabled {
   cursor: not-allowed;
   background: #F8F8F8;
   color: #C2C2C2;
 }
 
 @media screen and (max-width: 1023px) {
-  .profile__form_buttons-container {
+  .profile__form_buttons_container {
     flex-basis: 242px;
   }
 
-  .profile__form-title {
-    padding-top: 216px;
-    padding-bottom: 56px;
+  .profile__form_title {
+    padding-top: 196px;
+    padding-bottom: 77px;
+  }
+
+  .profile__form_container {
+    padding-top: 185px;
   }
 }
 
 @media screen and (max-width: 766px) {
-  .profile__form-container {
-    flex-basis: 397px;
+  .profile__form_container {
+    padding-top: 355px;
   }
 
-  .profile__form-title {
+  .profile__form_title {
     padding-top: 20px;
     padding-bottom: 20px;
   }

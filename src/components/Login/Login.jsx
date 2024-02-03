@@ -23,7 +23,7 @@ function Login({
     title: 'Войти',
   };
 
-  const FORM_QUESTION = {
+  const QUESTION_TEXT = {
     questionText: 'Ещё не зарегистрированы?',
   };
 
@@ -61,7 +61,7 @@ function Login({
         titleText='Рады видеть!'
         inputsData={INPUTS_DATA}
         submitButtonSettings={SUBMIT_BUTTON}
-        formAuthQuestionSettings={FORM_QUESTION}
+        formAuthQuestionSettings={QUESTION_TEXT}
         routeLinkSettings={ROUTE_LINK}
         onChange={handleChange}
         values={values}

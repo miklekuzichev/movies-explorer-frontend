@@ -8,7 +8,7 @@ function Footer() {
         <footer className="footer">
             <div className="footer__container">
                 <p className="footer__text">{FOOTER_TITLE}</p>
-                <div className="footer__links-container">
+                <div className="footer__links_container">
                     <p className="footer__copyright">&copy;2023</p>
                     <nav>
                         <ul className="footer__links">

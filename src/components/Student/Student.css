@@ -26,9 +26,9 @@
   }
 }
 
-/* CSS стили для student__info-container */
+/* CSS стили для student__info_container */
 
-.student__info-container {
+.student__info_container {
   max-width: 1140px;
   margin: 43px auto 100px auto;
   display: flex;
@@ -37,14 +37,14 @@
 }
 
 @media screen and (max-width: 1184px) {
-  .student__info-container {
+  .student__info_container {
     max-width: 668px;
     margin: 66px auto 91px auto;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .student__info-container {
+  .student__info_container {
     max-width: 298px;
     margin-top: 60px;
     margin-bottom: 69px;
@@ -71,6 +71,7 @@
 
 .student__title {
   margin: 0;
+  margin-top: 23px;
   color: #FFF;
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-size: 50px;
@@ -131,7 +132,7 @@
 .student__text {
   margin: 0;
   margin-top: 26px;
-  margin-bottom: 99px;
+  margin-bottom: 11px;
   color: #FFF;
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-size: 14px;

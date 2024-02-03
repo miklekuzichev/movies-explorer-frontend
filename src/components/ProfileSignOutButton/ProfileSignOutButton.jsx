@@ -7,7 +7,7 @@ function ProfileSignoutButton({
 
   return (
     <button
-      className='profile__signout-button'
+      className='profile__signout_button'
       onClick={onSignOut}>
       {title}
     </button>

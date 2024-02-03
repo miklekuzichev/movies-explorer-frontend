@@ -1,6 +1,6 @@
-/* CSS стили для route__link */
+/* CSS стили для route-link */
 
-.route__link {
+.route-link {
   padding-left: 7px;
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-weight: normal;
@@ -14,12 +14,12 @@
   text-decoration: none;
 }
 
-.route__link:hover {
+.route-link:hover {
   opacity: 0.7;
 }
 
 @media screen and (max-width: 766px) {
-  .route__link {
+  .route-link {
     font-size: 12px;
     line-height: 1.25;
   }

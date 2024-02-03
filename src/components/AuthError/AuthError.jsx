@@ -4,7 +4,7 @@ function AuthError({ errorText }) {
 
   return (
     <span
-      className='auth__error'
+      className='auth-error'
       aria-live="polite">
       {errorText}
     </span>

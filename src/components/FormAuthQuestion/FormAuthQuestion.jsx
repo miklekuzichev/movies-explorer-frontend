@@ -6,7 +6,7 @@ function FormAuthQuestion({
 }) {
 
   return (
-    <p className='form-question-text'>
+    <p className='auth-form__question_text'>
       {settings.questionText}
       {children}
     </p>

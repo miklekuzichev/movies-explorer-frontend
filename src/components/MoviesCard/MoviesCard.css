@@ -1,6 +1,6 @@
-/* CSS стили для films__container-item */
+/* CSS стили для films__container_item */
 
-.films__container-item {
+.films__container_item {
   max-width: 360px;
   height: 319px;
   flex-shrink: 0;
@@ -10,15 +10,15 @@
 }
 
 @media screen and (max-width: 320px) {
-  .films__container-item {  
+  .films__container_item {  
       max-width: 300px;
       height: 271px;
   }
 }
 
-/* CSS стили для films__container-title */
+/* CSS стили для films__container_title */
 
-.films__container-title {
+.films__container_title {
   margin: 0;
   padding: 18px;
   display: flex;
@@ -26,14 +26,14 @@
 }
 
 @media screen and (max-width: 378px) {
-  .films__container-title {  
+  .films__container_title {  
       padding: 14px;
   }
 }
 
-/* CSS стили для films__container-text */
+/* CSS стили для films__container_text */
 
-.films__container-text {
+.films__container_text {
   margin: 0;
   padding: 0;
   display: flex;
@@ -46,14 +46,14 @@
 }
 
 @media screen and (max-width: 378px) {
-  .films__container-text {  
+  .films__container_text {  
       font-size: 12px;
   }
 }
 
-/* CSS стили для films__container-time */
+/* CSS стили для films__container_time */
 
-.films__container-time {
+.films__container_time {
   margin: 0;
   padding: 0;
   color: #8B8B8B;
@@ -66,14 +66,14 @@
 }
 
 @media screen and (max-width: 378px) {
-  .films__container-time {  
+  .films__container_time {  
       font-size: 10px;
   }
 }
 
-/* CSS стили для films__container-image */
+/* CSS стили для films__container_image */
 
-.films__container-image {
+.films__container_image {
   width: 100%;
   height: 100%;
   max-height: 200px;
@@ -82,13 +82,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .films__container-image {  
+  .films__container_image {  
       max-height: 190px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .films__container-image {  
+  .films__container_image {  
       max-height: 168px;
   }
 }

@@ -15,10 +15,10 @@ function SearchForm({
                     </form>
                     <div className="search__short">
                         <label className="search__switch">
-                            <input type="checkbox" className="search__short-input"/>
-                            <span className="search__short-slider"></span>
+                            <input type="checkbox" className="search__short_input"/>
+                            <span className="search__short_slider"></span>
                         </label>
-                        <p className="search__short-text">Короткометражки</p>
+                        <p className="search__short_text">Короткометражки</p>
                     </div>
                 </div>
             </section>

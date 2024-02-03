@@ -1,3 +1,5 @@
+/* CSS стили для mobile-navigation */
+
 .mobile-navigation {
   display: none;
 }
@@ -9,7 +11,7 @@
     align-items: center;
   }
 
-  .mobile-navigation__nav-list {
+  .mobile-navigation__nav_list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -18,17 +20,17 @@
     align-items: center;
   }
 
-  .mobile-navigation__nav-links-container {
+  .mobile-navigation__nav_links_container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .mobile-navigation__nav-list-item {
+  .mobile-navigation__nav_list_item {
     padding-bottom: 28px;
   }
 
-  .mobile-navigation__nav-list-item:last-of-type {
+  .mobile-navigation__nav_list_item:last-of-type {
     padding-bottom: 0;
   }
 

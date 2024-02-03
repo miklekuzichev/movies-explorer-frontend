@@ -8,12 +8,12 @@ function MoviesCard({
 }) {
 
   return (
-      <div className="films__container-item">
-        <div className="films__container-title">
-          <h2 className="films__container-text">В погоне за Бенкси</h2>
-          <span className="films__container-time">0ч 42м</span>
+      <div className="films__container_item">
+        <div className="films__container_title">
+          <h2 className="films__container_text">В погоне за Бенкси</h2>
+          <span className="films__container_time">0ч 42м</span>
         </div>
-        <img src={img} alt="Картинка постера фильма" className="films__container-image"/> 
+        <img src={img} alt="Картинка постера фильма" className="films__container_image"/> 
           <MoviesButton
           onSaveFilm={onSaveFilm}
           onDeleteFilm={onDeleteFilm}
