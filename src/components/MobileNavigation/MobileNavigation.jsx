@@ -39,11 +39,11 @@ const MobileNavigation = React.memo((props) => {
   const mobileNavigationLinksMarkup = MOBILE_NAVIGATION_LINKS.map((item) => (
     <li
       key={item.id}
-      className="mobile-navigation__nav_list_item"
+      className="mobile-navigation__nav-list-item"
     >
       <NavLink
         className={({ isActive }) =>
-          isActive ? 'mobile-navigation__link mobile-navigation__link_active' : 'mobile-navigation__link'
+          isActive ? 'mobile-navigation__link mobile-navigation__link-active' : 'mobile-navigation__link'
         }
         to={item.link}
         onClick={item.onClick}
@@ -56,7 +56,7 @@ const MobileNavigation = React.memo((props) => {
 
   return (
     <nav className="mobile-navigation">
-      <ul className="mobile-navigation__nav_list">
+      <ul className="mobile-navigation__nav-list">
         {mobileNavigationLinksMarkup}
       </ul>
     </nav>

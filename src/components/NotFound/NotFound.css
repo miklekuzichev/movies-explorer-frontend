@@ -46,9 +46,9 @@
     color: #fff;
   }
 
-/* CSS стили для not-found__go-back_button */
+/* CSS стили для not-found__go-back-button */
 
-  .not-found__go-back_button {
+  .not-found__go-back-button {
     margin: 0 auto;
     padding-top: 184px;
     font-family: 'Inter', 'Arial', 'sans-serif';
@@ -65,7 +65,7 @@
     font-size: 14px;
   }
   
-  .not-found__go-back_button:hover {
+  .not-found__go-back-button:hover {
     opacity: .8;
   }
   
@@ -92,7 +92,7 @@
       line-height: 1.25;
     }
   
-    .not-found__go-back_button {
+    .not-found__go-back-button {
       font-size: 12px;
       line-height: 1.25;
     }

@@ -6,7 +6,7 @@ function ShowMoreButton({
 
   return (
     <button
-      className='films__more_button'
+      className='films__more-button'
       onClick={onClick}>
       Ещё
     </button>

@@ -27,8 +27,8 @@ function AuthForm({
   const formInputsMarkup = inputsData.map((item) => (
     <div
       key={item.key}
-      className='auth-form__input_container'>
-      <label className='auth-form__input_label'>
+      className='auth-form__input-container'>
+      <label className='auth-form__input-label'>
         {item.label}
         <InputField
           className='auth-form__input'
@@ -38,7 +38,7 @@ function AuthForm({
         />
       </label>
       <span
-        className='auth-form__input_error'
+        className='auth-form__input-error'
         aria-live="polite">
         {item.regexp && errors[item.name] && item.customErrorMessage}
         {errors[item.name]}
@@ -58,7 +58,7 @@ function AuthForm({
         />
       </div>
       <fieldset
-        className='auth-form__input_fieldset'
+        className='auth-form__input-fieldset'
         disabled={isLoadingData}>
         {formInputsMarkup}
         {isAuthError && (
@@ -68,11 +68,11 @@ function AuthForm({
         )}
 
       </fieldset>
-      <div className='auth-form__button_container'>
+      <div className='auth-form__button-container'>
         <SubmitButton
           disabled={!formIsValid || isLoadingData}
           settings={submitButtonSettings}
-          className='auth-form__submit_button'
+          className='auth-form__submit-button'
         />
         <FormAuthQuestion
           settings={formAuthQuestionSettings}

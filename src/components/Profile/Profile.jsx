@@ -17,8 +17,8 @@ function Profile({
   const [updateErrorText, setUpdateUserProfileErrorText] = React.useState('');
   const [formIsValid, setFormValid] = React.useState(false);
 
-  const headerClass = 'header header__color_black';
-  const headerAccountIconClass = 'header__account_icon_background header__account_icon_background_gray';
+  const headerClass = 'header header__black';
+  const headerAccountIconClass = 'header__account-icon-background header__account-icon-background-gray';
   
   const {
     values,

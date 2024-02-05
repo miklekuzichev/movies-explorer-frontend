@@ -49,9 +49,9 @@
   }
 }
 
-/* CSS стили для footer__links_container */
+/* CSS стили для footer__links-container */
 
-.footer__links_container {
+.footer__links-container {
   max-width: 1140px;
   min-height: 56px;
   margin: 0 auto;
@@ -63,7 +63,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .footer__links_container {
+  .footer__links-container {
     max-width: 300px;
     padding-top: 28px;
     flex-direction: column-reverse;

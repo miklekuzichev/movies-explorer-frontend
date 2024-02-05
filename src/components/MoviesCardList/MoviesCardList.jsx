@@ -12,7 +12,7 @@ function MoviesCardList({
  
   return (
     <section className="films" aria-label="Галерея фильмов">
-      <div className="films__container">
+      <ul className="films__container">
       <MoviesCard
         onSaveFilm={onSaveFilm}
         onDeleteFilm={onDeleteFilm}
@@ -37,7 +37,7 @@ function MoviesCardList({
         onSaveFilm={onSaveFilm}
         onDeleteFilm={onDeleteFilm}
       />
-      </div>
+      </ul>
       {locationPathname === '/movies' && isShowButtonActive ? (
         <ShowMoreButton
         />

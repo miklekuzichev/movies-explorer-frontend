@@ -34,6 +34,10 @@ function App() {
 
   const navigate = useNavigate();
 
+  const handleSignOut = () => {
+    navigate('/');
+  };
+
   React.useEffect(() => {
 
     const handleWindowLoad = () => {
@@ -95,6 +99,7 @@ function App() {
                     <ProtectedRoute
                         loggedIn={true}
                         setOpenMenu={setOpenMenu}
+                        onSignOut={handleSignOut}
                         redirectTo={'/signin'}
                         component={Profile}/>
                 }

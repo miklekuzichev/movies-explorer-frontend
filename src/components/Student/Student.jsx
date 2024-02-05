@@ -10,10 +10,10 @@ function Student() {
   return (
     <section className="student">
                 <div className="student__container">
-                    <div className="intro__title_container">
-                        <h2 className="intro__title">{STUDENT_TITLE}</h2>
-                    </div>
-                    <div className="student__info_container">
+
+                        <h2 className="student__head-title">{STUDENT_TITLE}</h2>
+
+                    <div className="student__info-container">
                         <div className="student__info">
                             <h2 className="student__title">Михаил</h2>
                             <h3 className="student__subtitle">Фронтенд-разработчик, 30 лет</h3>

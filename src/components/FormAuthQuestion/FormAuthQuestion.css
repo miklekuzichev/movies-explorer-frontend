@@ -1,4 +1,4 @@
-.auth-form__question_text {
+.auth-form__question-text {
   margin: 0;
   padding: 16px 0;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .auth-form__question_text {
+  .auth-form__question-text {
     padding-top: 14px;
     padding-bottom: 14px;
     font-size: 12px;

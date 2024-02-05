@@ -1,6 +1,6 @@
-/* CSS стили для profile__edit_button */
+/* CSS стили для profile__edit-button */
 
-.profile__edit_button {
+.profile__edit-button {
   padding: 8px 8px 6px 8px;
   margin: 0;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -18,12 +18,12 @@
   box-sizing: border-box;
 }
 
-.profile__edit_button:hover {
+.profile__edit-button:hover {
   opacity: 0.7;
 }
 
 @media screen and (max-width: 766px) {
-  .profile__edit_button {
+  .profile__edit-button {
     font-size: 12px;
     line-height: 1.25;
   }

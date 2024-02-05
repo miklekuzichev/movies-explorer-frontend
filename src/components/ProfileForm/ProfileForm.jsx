@@ -1,7 +1,7 @@
 import React from 'react';
 import FormTitle from '../FormTitle/FormTitle';
 import InputField from '../InputField/InputField';
-import ProfileUpdateError from '../ProfileUpdateError/ProfileUpdateError';
+import ProfileUpdateError from '../ProfileUpdateError/ProfileUpdateError.jsx';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import ProfileEditButton from '../ProfileEditButton/ProfileEditButton';
 import ProfileSignoutButton from '../ProfileSignOutButton/ProfileSignOutButton';
@@ -29,17 +29,17 @@ function ProfileForm({
   const formInputs = inputsData.map((item) => (
     <div
       key={item.key}
-      className='profile__form_input_container'>
-      <label className='profile__form_input_label'>
+      className='profile__form-input-container'>
+      <label className='profile__form-input-label'>
         {item.label}
         <InputField
-          className='profile__form_input'
+          className='profile__form-input'
           settings={item}
           onChange={onChange}
           value={values[item.name]}/>
       </label>
       <span
-        className='profile__form_input_error'>
+        className='profile__form-input-error'>
         {errors[item.name]}
       </span>
     </div>
@@ -50,17 +50,17 @@ function ProfileForm({
       onSubmit={onSubmit}
       className='profile__form'
       noValidate>
-      <div className='profile__form_title'>
+      <div className='profile__form-title'>
         <FormTitle
           titleText={titleText}
         />
       </div>
       <fieldset
-        className='profile__form_input_fieldset'
+        className='profile__form-input-fieldset'
         disabled={isLoadingData || !isEdited}>
         {formInputs}
       </fieldset>
-      <div className='profile__form_container'>
+      <div className='profile__form-container'>
         {isUpdateUserProfileError && (
           <ProfileUpdateError 
           errorText={profileUpdateErrorText}/>
@@ -69,7 +69,7 @@ function ProfileForm({
           <SubmitButton
             disabled={!formIsValid}
             settings={submitButtonSettings}
-            className='profile__form_submit_button'/>
+            className='profile__form-submit-button'/>
         ) : (
           <>
             {isLoadingData && (

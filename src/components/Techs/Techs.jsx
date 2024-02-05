@@ -9,36 +9,36 @@ function Techs() {
   return (
     <section className="technologies">
                 <div className="technologies__container">
-                    <div className="technologies__title_container">
-                        <h2 className="intro__title">{INTRO_TITLE_TEXT}</h2>
-                    </div>
+                    
+                        <h2 className="technologies__head-title">{INTRO_TITLE_TEXT}</h2>
+                    
 
-                    <h2 className="technologies__title">{TECHNOLOGIES_TITLE_TEXT}</h2>
+                    <h3 className="technologies__title">{TECHNOLOGIES_TITLE_TEXT}</h3>
                     <p className="technologies__subtitle">{TECHNOLOGIES_SUBTITLE_TEXT}</p>
 
-                    <div className="technologies__card_container">
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">HTML</p>
-                        </div>
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">CSS</p>
-                        </div>
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">JS</p>
-                        </div>
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">React</p>
-                        </div>
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">Git</p>
-                        </div>
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">Express.js</p>
-                        </div>
-                        <div className="technologies__card">
-                            <p className="technologies__card_text">mongoDB</p>
-                        </div>
-                    </div>
+                    <ul className="technologies__card-container">
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">HTML</p>
+                        </li>
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">CSS</p>
+                        </li>
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">JS</p>
+                        </li>
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">React</p>
+                        </li>
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">Git</p>
+                        </li>
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">Express.js</p>
+                        </li>
+                        <li className="technologies__card">
+                            <p className="technologies__card-text">mongoDB</p>
+                        </li>
+                    </ul>
                 </div>
       </section>
   )

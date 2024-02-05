@@ -1,6 +1,6 @@
-/* CSS стили для profile__signout_button */
+/* CSS стили для profile__signout-button */
 
-.profile__signout_button {
+.profile__signout-button {
   padding: 10px 8px 6px 8px;
   margin: 0;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -13,16 +13,16 @@
   background: unset;
   border: unset;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: opacity .3s ease;
   box-sizing: border-box;
 }
 
-.profile__signout_button:hover {
-  opacity: 0.7;
+.profile__signout-button:hover {
+  opacity: .7;
 }
 
 @media screen and (max-width: 766px) {
-  .profile__signout_button {
+  .profile__signout-button {
     font-size: 12px;
     line-height: 1.25;
   }

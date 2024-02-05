@@ -12,7 +12,7 @@ function Main({
 }) {
 
   const headerClass = 'header';
-  const headerAccountIconClass = 'header__account_icon_background header__account_icon_background_blue';
+  const headerAccountIconClass = 'header__account-icon-background header__account-icon-background-blue';
   
   return (
     <>

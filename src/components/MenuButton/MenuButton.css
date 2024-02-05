@@ -1,11 +1,11 @@
-/* CSS стили для menu__button */
+/* CSS стили для header__container-link-button */
 
-.menu__button {
+.header__container-link-button {
     display: none;
   }
   
   @media screen and (max-width: 800px) {
-    .menu__button {
+    .header__container-link-button {
       width: 44px;
       height: 44px;
       display: block;
@@ -21,7 +21,7 @@
   }
 
   @media screen and (max-width: 376px) {
-    .menu__button {
+    .header__container-link-button {
       width: 22px;
       height: 40px;
       background-size: cover;

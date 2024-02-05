@@ -13,8 +13,8 @@ function SavedMovies({
 }) {
 
   const location = useLocation();
-  const headerClass = 'header header__color_black';
-  const headerAccountIconClass = 'header__account_icon_background header__account_icon_background_gray';
+  const headerClass = 'header header__black';
+  const headerAccountIconClass = 'header__account-icon-background header__account-icon-background-gray';
   
   return (
     <>

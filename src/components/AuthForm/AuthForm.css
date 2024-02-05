@@ -26,18 +26,18 @@
     box-sizing: border-box;
   }
 
-/* CSS стили для auth-form__input_fieldset */
+/* CSS стили для auth-form__input-fieldset */
 
-  .auth-form__input_fieldset {
+  .auth-form__input-fieldset {
     flex: 1 266px;
     margin: 0;
     padding: 0;
     border: unset;
   }
 
-/* CSS стили для auth-form__input_label */
+/* CSS стили для auth-form__input-label */
 
-  .auth-form__input_label {
+  .auth-form__input-label {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -51,13 +51,13 @@
     text-align: left;
   }
 
-/* CSS стили для auth-form__input_container */
+/* CSS стили для auth-form__input-container */
 
-.auth-form__input_container {
+.auth-form__input-container {
   margin-bottom: 24px;
 }
 
-.auth-form__input_container:last-of-type {
+.auth-form__input-container:last-of-type {
   margin-bottom: 10px;
 }
 
@@ -86,9 +86,9 @@
     color: #EE3465;
   }
 
-/* CSS стили для auth-form__input_error */
+/* CSS стили для auth-form__input-error */
 
-  .auth-form__input_error {
+  .auth-form__input-error {
     font-family: 'Inter', 'Arial', 'sans-serif';
     text-align: left;
     font-weight: normal;
@@ -98,9 +98,9 @@
     color: #EE3465;
   }
   
-/* CSS стили для auth-form__button_container */
+/* CSS стили для auth-form__button-container */
 
-  .auth-form__button_container {
+  .auth-form__button-container {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -108,9 +108,9 @@
     box-sizing: border-box;
   }
 
-/* CSS стили для auth-form__submit_buttonr */
+/* CSS стили для auth-form__submit-button */
 
-  .auth-form__submit_button {
+  .auth-form__submit-button {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -132,11 +132,11 @@
     color: rgb(255, 255, 255, 1);
   }
   
-  .auth-form__submit_button:hover {
+  .auth-form__submit-button:hover {
     background: rgba(66, 133, 244, 0.8);
   }
   
-  .auth-form__submit_button:disabled {
+  .auth-form__submit-button:disabled {
     cursor: not-allowed;
   }
 
@@ -157,16 +157,13 @@
       padding-bottom: 30px;
     }
   
-    .auth-form__button_container {
+    .auth-form__button-container {
       justify-content: flex-end;
+      flex-basis: 261px;
     }
   
     .auth-form_submit_button {
       font-size: 12px;
       line-height: 1.25;
-    }
-  
-    .auth-form__button_container {
-      flex-basis: 261px;
     }
   }

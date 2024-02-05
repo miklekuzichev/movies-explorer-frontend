@@ -1,6 +1,6 @@
-/* CSS стили для header__auth_links */
+/* CSS стили для header__auth-links */
 
-.header__auth_links {  
+.header__auth-links {  
   padding-top: 21px;
   padding-bottom: 23px;
   display: flex;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.header__auth_nav_list {
+.header__auth-nav-list {
   margin: 0;
   padding: 0;
   display: grid;
@@ -17,7 +17,7 @@
   list-style: none;
 }
   
-.header__auth_link {
+.header__auth-link {
   margin: 0;
   padding: 8px 20px;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -32,24 +32,24 @@
   border-radius: 3px;
 }
   
-.header__auth_link:hover {
+.header__auth-link:hover {
   opacity: 0.7;
 }
   
-.header__auth_link_color_white {
+.header__auth-link-color-white {
   color: #fff;
 }
 
-.header__auth_link_bgcolor_green {
+.header__auth-link-bgcolor-green {
   background: #2BE080;
 }
   
 @media screen and (max-width: 767px) {
-  .header__auth_nav_list {
+  .header__auth-nav-list {
     gap: 2px;
   }
 
-  .header__auth_link {
+  .header__auth-link {
     padding: 5px 12px;
     font-size: 10px;
     line-height: 1.6;

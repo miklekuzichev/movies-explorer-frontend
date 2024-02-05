@@ -4,7 +4,7 @@ const MenuButton = React.memo((props) => {
   return (
     <button
       title='открыть меню'
-      className="menu__button"
+      className="header__container-link-button"
       onClick={props.onOpenMenu}/>
   )
 });

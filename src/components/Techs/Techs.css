@@ -27,31 +27,42 @@
   }
 }
 
-/* CSS стили для technologies__title_container */
+/* CSS стили для technologies__head-title */
 
-.technologies__title_container {
+.technologies__head-title {
   min-width: 1140px;
   margin: 0 auto;
-  padding-top: 78px;
+  padding-top: 100px;
+  padding-bottom: 23px;
   border-bottom: solid 1px #DADADA;
+  /*margin-top: 23px;*/
+  margin-bottom: 23px;
+  text-align: left; /* выравниваем текст по горизонтали внутри блока */
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
 }
 
-
 @media screen and (max-width: 1184px) {
-  .technologies__title_container {
+  .technologies__head-title {
     max-width: 668px;
     min-width: auto;
-    padding-top: 67px;  
+    padding-top: 92px;  
   }
 }
 
 @media screen and (max-width: 700px) {
-  .technologies__title_container {
+  .technologies__head-title {
+    margin-bottom: 0; 
+    font-size: 18px;
+    letter-spacing: -0.72px;
     max-width: 284px;
-    padding-top: 47px; 
-  }
-
-  .technologies__title_container:nth-child(odd) {
+    padding-top: 72px;
+    padding-bottom: 27px;
     border-bottom: solid 1px #000000;
   }
 }
@@ -63,7 +74,7 @@
   max-width: 600px;
   color: #FFF;
   text-align: center;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'Inter', 'Arial', 'sans-serif';
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
@@ -119,33 +130,35 @@
   }
 }
 
-/* CSS стили для technologies__card_container */
+/* CSS стили для technologies__card-container */
 
-.technologies__card_container {
+.technologies__card-container {
   margin: 0 auto;
+  padding: 0;
   padding-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   max-width: 1140px;
   background: #272727;
+  list-style: none;
 }
 
 @media screen and (max-width: 1184px) {
-  .technologies__card_container {
+  .technologies__card-container {
     padding-bottom: 90px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .technologies__card_container {
+  .technologies__card-container {
     padding-bottom: 70px;
     flex-wrap: wrap;
     max-width: 178px;
     background: #202020;
   }
 
-  .technologies__card_container:last-child {
+  .technologies__card-container:last-child {
     justify-content: left;
   }
 }
@@ -187,9 +200,9 @@
   }
 }
 
-/* CSS стили для technologies__card_text */
+/* CSS стили для technologies__card-text */
 
-.technologies__card_text {
+.technologies__card-text {
   margin: 0;
   display: inline-block;
   color: #FFF;
@@ -203,7 +216,7 @@
 }
 
 @media screen and (max-width: 1184px) {
-  .technologies__card_text {
+  .technologies__card-text {
     font-size: 12px;
     letter-spacing: -0.48px;
   }
