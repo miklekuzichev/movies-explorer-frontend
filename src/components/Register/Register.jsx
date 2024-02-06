@@ -72,20 +72,22 @@ function Register({
     <main
       className='register'
     >
-      <AuthForm
-        titleText='Добро пожаловать!'
-        inputsData={INPUTS_DATA}
-        onChange={handleChange}
-        values={values}
-        errors={errors}
-        submitButtonSettings={SUBMIT_BUTTON_SETTINGS}
-        formAuthQuestionSettings={QUESTION_TEXT}
-        routeLinkSettings={ROUTE_LINK_SETTINGS}
-        formIsValid={isValid}
-        authErrorText={registrationErrorText}
-        isAuthError={isRegistrationError}
-        isLoadingData={isLoadingSignup}
-      />
+      <section>
+        <AuthForm
+          titleText='Добро пожаловать!'
+          inputsData={INPUTS_DATA}
+          onChange={handleChange}
+          values={values}
+          errors={errors}
+          submitButtonSettings={SUBMIT_BUTTON_SETTINGS}
+          formAuthQuestionSettings={QUESTION_TEXT}
+          routeLinkSettings={ROUTE_LINK_SETTINGS}
+          formIsValid={isValid}
+          authErrorText={registrationErrorText}
+          isAuthError={isRegistrationError}
+          isLoadingData={isLoadingSignup}
+        />
+      </section>
     </main>
   )
 }

@@ -8,6 +8,7 @@ function ProfileEditButton({
   return (
     <button
       className='profile__edit-button'
+      type='button'
       onClick={onClick}>
       {title}
     </button>

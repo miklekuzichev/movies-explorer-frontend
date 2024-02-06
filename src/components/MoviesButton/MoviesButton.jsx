@@ -4,11 +4,11 @@ function MoviesButton({
   onSaveFilm,
   onDeleteFilm,
 }) {
-    const saveFilmClass = onSaveFilm ? "films__container-button films__container-button-active" : 'films__container-button films__container-button-save';
+    const saveFilmClass = onSaveFilm ? 'films__container-button films__container-button-active' : 'films__container-button films__container-button-save';
     const saveFilmIconClass = onSaveFilm ? "films__button films__button-saved" : onDeleteFilm ? 'films__button films__button-deleted' : 'films__button-hide';
 
   return (
-    <button className={saveFilmClass} type="submit">
+    <button className={saveFilmClass} type='button'>
         {(onSaveFilm) ? '' : (onDeleteFilm) ? '' : 'Сохранить'}
         <span className={saveFilmIconClass}></span>
     </button>

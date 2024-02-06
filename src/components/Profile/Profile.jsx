@@ -99,27 +99,27 @@ function Profile({
             className={headerClass}
             classNameIcon={headerAccountIconClass}
     />
-    <main
-      className='profile'
-    >
-      <ProfileForm
-        titleText={TITLE_TEXT}
-        inputsData={INPUT_DATA}
-        onChange={handleChange}
-        values={values}
-        errors={errors}
-        onSubmit={handleSubmit}
-        submitButtonSettings={SUBMIT_SETTINGS}
-        formIsValid={formIsValid}
-        isEdited={isEdited}
-        onToggleEditableProfile={handleToggleEditProfile}
-        profileEditButtonSettings='Редактировать'
-        profileSignoutButtonSettings='Выйти из аккаунта'
-        profileUpdateErrorText={updateErrorText}
-        isUpdateUserProfileError={isUpdateError}
-        onSignOut={onSignOut}
-        isLoadingData={isLoadingUpdateCurrentUser}
-      />
+    <main>
+      <section className='profile'>
+        <ProfileForm
+          titleText={TITLE_TEXT}
+          inputsData={INPUT_DATA}
+          onChange={handleChange}
+          values={values}
+          errors={errors}
+          onSubmit={handleSubmit}
+          submitButtonSettings={SUBMIT_SETTINGS}
+          formIsValid={formIsValid}
+          isEdited={isEdited}
+          onToggleEditableProfile={handleToggleEditProfile}
+          profileEditButtonSettings='Редактировать'
+          profileSignoutButtonSettings='Выйти из аккаунта'
+          profileUpdateErrorText={updateErrorText}
+          isUpdateUserProfileError={isUpdateError}
+          onSignOut={onSignOut}
+          isLoadingData={isLoadingUpdateCurrentUser}
+        />
+      </section>
     </main>
     </>
   )

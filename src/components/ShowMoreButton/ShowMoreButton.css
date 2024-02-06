@@ -25,6 +25,8 @@
 
 .films__more-button:hover {
   cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s linear;
 } 
 
 @media screen and (max-width: 1184px) {

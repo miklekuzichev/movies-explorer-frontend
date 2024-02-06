@@ -9,7 +9,7 @@ function Footer() {
             <div className="footer__container">
                 <p className="footer__text">{FOOTER_TITLE}</p>
                 <div className="footer__links-container">
-                    <p className="footer__copyright">&copy;2023</p>
+                    <p className="footer__copyright">&copy; 2023</p>
                     <nav>
                         <ul className="footer__links">
                           <li><a href="https://practicum.yandex.ru/" target="_blank" rel="noreferrer" className="footer__link">Яндекс.Практикум</a></li>

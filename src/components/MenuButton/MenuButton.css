@@ -3,6 +3,12 @@
 .header__container-link-button {
     display: none;
   }
+
+.header__container-link-button:hover {
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
   
   @media screen and (max-width: 800px) {
     .header__container-link-button {
@@ -20,10 +26,8 @@
     }
   }
 
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 500px) {
     .header__container-link-button {
-      width: 22px;
-      height: 40px;
-      background-size: cover;
+      width: 37px;
     }
   }

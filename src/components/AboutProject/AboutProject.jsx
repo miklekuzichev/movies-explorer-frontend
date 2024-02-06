@@ -11,9 +11,7 @@ function AboutProject() {
     <section className="intro">
                 <a href='./' name="intro"> </a>
                 <div className="intro__container">
-                    
-                        <h2 className="intro__head-title">{INTRO_TITLE}</h2>
-                    
+                    <h2 className="intro__head-title">{INTRO_TITLE}</h2>
 
                     <div className="intro__about-container">
                         <div className="intro__about">
@@ -28,21 +26,13 @@ function AboutProject() {
 
                     <div className="intro__stages-container">
                         <div className="intro__stages">
-                            <div className="intro__stage-left intro__stage-left-green">
-                                <p className="intro__stage-text intro__stage-text-black">1 неделя</p> 
-                            </div>
-                            <div className="intro__stage-right intro__stage-right-gray">
-                                <p className="intro__stage-text intro__stage-text-white">4 недели</p> 
-                            </div>
+                                <p class="intro__stage-text intro__stage-left intro__stage-text-black intro__stage-left-green">1 неделя</p> 
+                                <p class="intro__stage-text intro__stage-right intro__stage-text-white intro__stage-right-gray">4 недели</p> 
                         </div>
 
-                        <div className="intro__stages">
-                            <div className="intro__stage-left">
-                                <p className="intro__stage-text intro__stage-text-gray">Back-end</p> 
-                            </div>
-                            <div className="intro__stage-right">
-                                <p className="intro__stage-text intro__stage-text-gray">Front-end</p> 
-                            </div>
+                        <div class="intro__stages">
+                                <p class="intro__stage-text intro__stage-left intro__stage-text-gray">Back-end</p> 
+                                <p class="intro__stage-text intro__stage-right intro__stage-text-gray">Front-end</p> 
                         </div>
                     </div>
 

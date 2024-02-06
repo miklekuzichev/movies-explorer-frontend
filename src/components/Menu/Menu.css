@@ -28,7 +28,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 70%;
+      width: 67%;
       height: 100vh;
     }
   
@@ -36,7 +36,7 @@
       display: flex;
       flex-direction: column;
       height: 100%;
-      padding: 22px 22px 92px 22px;
+      padding: 25px 25px 92px 25px;
       background: #202020;
       box-sizing: border-box;
     }
@@ -44,7 +44,7 @@
     .menu-modal__header {
       display: flex;
       justify-content: flex-end;
-      flex: 1 270px;
+      flex: 1 143px;
     }
   
     .menu-modal__main {
@@ -77,7 +77,11 @@
     }
   
     .menu-modal__content {
-      padding: 13px 13px 48px 13px;
+      padding: 18px 18px 48px 18px;
+    }
+
+    .menu-modal__header {
+      flex: 1 180px;
     }
   }
   

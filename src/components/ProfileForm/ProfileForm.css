@@ -10,13 +10,20 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 766px) {
+  .profile__form {
+    max-width: 260px;
+  }
+}
+
+
 /* CSS стили для profile__form-title */
 
 .profile__form-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 54px 0 105px 0;
+  padding: 50px 0 105px 0;
   max-width: 410px;
   width: 100%;
   margin: 0 auto;
@@ -136,7 +143,7 @@
   }
 
   .profile__form-title {
-    padding-top: 196px;
+    padding-top: 212px;
     padding-bottom: 77px;
   }
 
@@ -151,7 +158,7 @@
   }
 
   .profile__form-title {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
   }
 }

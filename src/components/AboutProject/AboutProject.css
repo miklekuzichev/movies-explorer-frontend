@@ -19,10 +19,9 @@
 .intro__head-title {
   min-width: 1140px;
   margin: 0 auto;
-  padding-top: 112px;
-  padding-bottom: 23px;
+  padding-top: 111px;
+  padding-bottom: 21px;
   border-bottom: solid 1px #DADADA;
-  /*margin-top: 23px;*/
   text-align: left; /* выравниваем текст по горизонтали внутри блока */
   color: #FFF;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -72,7 +71,7 @@
   .intro__about-container {
     flex-direction: column;
     max-width: 284px;
-    margin-top: 3px;
+    margin-top: 5px;
   }
 }
 
@@ -139,7 +138,7 @@
 
 @media screen and (max-width: 700px) {
 .intro__about {
-  margin-top: 58px;
+  margin-top: 56px;
   max-width: 284px;
 }
 }
@@ -154,14 +153,14 @@
 @media screen and (max-width: 1184px) {
   .intro__stages-container {
       margin-top: 93px;
-      padding-bottom: 81px;
+      padding-bottom: 75px;
   }
 }
 
 @media screen and (max-width: 700px) {
   .intro__stages-container {
-      margin-top: 58px;
-      padding-bottom: 59px;
+      margin-top: 49px;
+      padding-bottom: 57px;
   }
 }
 
@@ -183,7 +182,12 @@
 /* CSS стили для intro__stage-text */
 
 .intro__stage-text {
-  text-align: center;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 11px;
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-size: 14px;
   font-style: normal;
@@ -193,26 +197,9 @@
 
 @media screen and (max-width: 700px) {
   .intro__stage-text {
-      font-size: 11px;
-  }
-}
-
-
-/* CSS стили для intro__stage-left */
-
-.intro__stage-left {
-  min-width: 228px;
-}
-
-@media screen and (max-width: 1184px) {
-  .intro__stage-left {
-    min-width: 140px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .intro__stage-left {
-    min-width: 100px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 11px;
   }
 }
 
@@ -237,14 +224,13 @@
 /* CSS стили для intro__stage-text-white */
 
 .intro__stage-text-white {
-  margin: 9px auto;
   color: #FFF;
 }
 
 @media screen and (max-width: 700px) {
   .intro__stage-text-white {
       margin-top: 11px;
-      margin-bottom: 11px;
+      margin-bottom: 0;
   }
 }
 
@@ -254,37 +240,59 @@
   background: #303030;
 }
 
-/* CSS стили для intro__stage-left=green */
+ /* CSS стили для intro__stage-left-green */
 
 .intro__stage-left-green {
-
   background: #3DDC84;
+}
 
+/* CSS стили для intro__stage-left */
+
+.intro__stage-left {
+  min-width: 228px;
+}
+
+@media screen and (max-width: 1184px) {
+  .intro__stage-left {
+    min-width: 140px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .intro__stage-left {
+    min-width: 100px;
+  }
 }
 
 /* CSS стили для intro__stage-text-black */
 
 .intro__stage-text-black {
-  margin: 9px auto;
   color: #000;
 }
 
 @media screen and (max-width: 700px) {
   .intro__stage-text-black {
       margin-top: 11px;
-      margin-bottom: 11px;
+      margin-bottom: 0;
   }
 }
 
 /* CSS стили для intro__stage-text-gray */
 
 .intro__stage-text-gray {
-  margin: 14px auto;
+  margin-top: 5px;
+  margin-bottom: 4px;
   color: #8B8B8B;
+}
+
+@media screen and (max-width: 1184px) {
+  .intro__stage-text-gray {
+    margin-top: 6px;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .intro__stage-text-gray {
-      margin: 10px auto;
+      margin: 0;
   }
 }

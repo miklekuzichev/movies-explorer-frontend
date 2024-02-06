@@ -34,8 +34,7 @@
   padding-top: 112px;
   padding-bottom: 23px;
   border-bottom: solid 1px #DADADA;
-  /*margin-top: 23px;*/
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   text-align: left; /* выравниваем текст по горизонтали внутри блока */
   color: #FFF;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -56,11 +55,11 @@
 
 @media screen and (max-width: 700px) {
   .student__head-title {
-    margin-bottom: 0; 
+    margin: 0; 
     font-size: 18px;
     letter-spacing: -0.72px;
-    max-width: 284px;
-    padding-top: 72px;
+    max-width: 292px;
+    padding-top: 71px;
     padding-bottom: 27px;
   }
 }
@@ -78,7 +77,7 @@
 @media screen and (max-width: 1184px) {
   .student__info-container {
     max-width: 668px;
-    margin: 66px auto 91px auto;
+    margin: 66px auto 90px auto;
   }
 }
 
@@ -185,7 +184,7 @@
   .student__text {
     max-height: 180px;
     margin-top: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     font-size: 12px;
     line-height: 18px; /* 150% */
   }
@@ -193,6 +192,7 @@
 
 @media screen and (max-width: 700px) {
   .student__text {
+    max-height: 210px;
     margin-top: 20px;
     margin-bottom: 40px; 
     font-size: 11px;
@@ -216,6 +216,7 @@
 /* CSS стили для student__foto */
 
 .student__foto {
+  margin-top: 23px;
   width: 270px;
   height: 327px;
   border-radius: 10px;
@@ -223,6 +224,7 @@
 
 @media screen and (max-width: 1184px) {
   .student__foto {
+    margin-top: 0px;
     width: 255px;
     height: 307px;
   }

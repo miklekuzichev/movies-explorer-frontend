@@ -57,17 +57,19 @@ function Login({
   return (
     <main
       className='login'>
-      <AuthForm
-        titleText='Рады видеть!'
-        inputsData={INPUTS_DATA}
-        submitButtonSettings={SUBMIT_BUTTON}
-        formAuthQuestionSettings={QUESTION_TEXT}
-        routeLinkSettings={ROUTE_LINK}
-        onChange={handleChange}
-        values={values}
-        errors={errors}
-        formIsValid={isValid}
-        isLoadingData={isLoadingSignin}/>
+        <section>
+          <AuthForm
+            titleText='Рады видеть!'
+            inputsData={INPUTS_DATA}
+            submitButtonSettings={SUBMIT_BUTTON}
+            formAuthQuestionSettings={QUESTION_TEXT}
+            routeLinkSettings={ROUTE_LINK}
+            onChange={handleChange}
+            values={values}
+            errors={errors}
+            formIsValid={isValid}
+            isLoadingData={isLoadingSignin}/>
+        </section>
     </main>
   )
 }

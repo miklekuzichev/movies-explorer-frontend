@@ -12,14 +12,14 @@ function SearchForm({
                         <button className="search__button" type="submit">
                             Поиск
                         </button>
-                    </form>
-                    <div className="search__short">
+                        <div className="search__short">
                         <label className="search__switch">
                             <input type="checkbox" className="search__short-input"/>
                             <span className="search__short-slider"></span>
                         </label>
                         <p className="search__short-text">Короткометражки</p>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </section>
   )

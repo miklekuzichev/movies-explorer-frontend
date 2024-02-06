@@ -29,9 +29,10 @@
 /* CSS стили для auth-form__input-fieldset */
 
   .auth-form__input-fieldset {
-    flex: 1 266px;
+    flex: 1 334px;
     margin: 0;
     padding: 0;
+    /*padding-bottom: 143px;*/
     border: unset;
   }
 
@@ -102,9 +103,9 @@
 
   .auth-form__button-container {
     display: flex;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
     flex-direction: column;
-    flex: 1 207px;
+    /*flex: 1 207px;*/
     box-sizing: border-box;
   }
 
@@ -140,26 +141,30 @@
     cursor: not-allowed;
   }
 
+  @media screen and (max-width: 767px) {
+    .auth-form__submit-button {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14.5px;
+    }
+  }
+
   @media screen and (max-width: 1023px) {
     .auth-form__title {
-      padding-top: 232px;
-    }
-  
-    .auth-form__button-container {
-      flex-basis: 379px;
+      padding-top: 198px;
     }
   }
   
   @media screen and (max-width: 767px) {
     .auth-form__title {
       align-items: center;
-      padding-top: 40px;
-      padding-bottom: 30px;
+      padding-top: 20px;
+      padding-bottom: 23px;
     }
   
     .auth-form__button-container {
       justify-content: flex-end;
-      flex-basis: 261px;
+      flex-basis: 177px;
     }
   
     .auth-form_submit_button {

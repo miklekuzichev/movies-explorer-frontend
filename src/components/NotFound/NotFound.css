@@ -15,9 +15,21 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding-top: 181px;
+    padding-top: 62px;
   }
-  
+
+  @media screen and (max-width: 1184px) {
+    .not-found__container {
+      padding-top: 228px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .not-found__container {
+      padding-top: 45px;
+    }
+  }
+
 /* CSS стили для not-found__title */
 
   .not-found__title {
@@ -50,7 +62,7 @@
 
   .not-found__go-back-button {
     margin: 0 auto;
-    padding-top: 184px;
+    padding-bottom: 60px;
     font-family: 'Inter', 'Arial', 'sans-serif';
     line-height: 17px;
     color: #4285F4;
@@ -69,6 +81,18 @@
     opacity: .8;
   }
   
+  @media screen and (max-width: 1184px) {
+    .not-found__go-back-button {
+      padding-bottom: 222px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .not-found__go-back-button {
+      padding-bottom: 30px;
+    }
+  }
+
   @media screen and (max-width: 1023px) {
     .not-found {
       min-height: calc(100vh - 222px);
@@ -83,6 +107,7 @@
     }
   
     .not-found__title {
+      margin-bottom: 11px;
       font-size: 80px;
       line-height: 1.21;
     }

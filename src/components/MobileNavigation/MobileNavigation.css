@@ -71,4 +71,8 @@
   .mobile-navigation__link-active {
     padding-bottom: 5px;
   }
+
+  .mobile-navigation__nav-list-item {
+    padding-bottom: 24px;
+  }
 }

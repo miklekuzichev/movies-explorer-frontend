@@ -52,12 +52,21 @@
   align-items: center;
 }
 
+.header__account:hover {  
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
 @media screen and (max-width: 750px) {
   .header__account {  
       margin-top: 30px;
       margin-bottom: 8px;
   }
 }
+
+
+
 
 /* CSS стили для header__account-text */
 

@@ -6,3 +6,8 @@
   max-width: 38px;
   min-height: 38px;
 }
+
+.header__container-link-logo:hover {
+  opacity: 0.8;
+  transition: 0.3s linear;
+}

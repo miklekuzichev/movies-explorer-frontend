@@ -13,7 +13,7 @@
     border-radius: 30px;
     color: #FFF;
     text-align: center;
-    font-family: 'Inter';
+    font-family: 'Inter', 'Arial', 'sans-serif';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -31,6 +31,8 @@
 
   .films__container-button:hover {
     cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s linear;
   }
   
   @media screen and (max-width: 378px) {

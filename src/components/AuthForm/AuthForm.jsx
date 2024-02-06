@@ -47,44 +47,44 @@ function AuthForm({
   ));
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className='auth-form'
-      noValidate>
-      <div className='auth-form__title'>
-        <Logo />
-        <FormTitle
-          titleText={titleText}
-        />
-      </div>
-      <fieldset
-        className='auth-form__input-fieldset'
-        disabled={isLoadingData}>
-        {formInputsMarkup}
-        {isAuthError && (
-          <AuthError
-            errorText={authErrorText}
+      <form
+        onSubmit={onSubmit}
+        className='auth-form'
+        noValidate>
+        <div className='auth-form__title'>
+          <Logo />
+          <FormTitle
+            titleText={titleText}
           />
-        )}
+        </div>
+        <fieldset
+          className='auth-form__input-fieldset'
+          disabled={isLoadingData}>
+          {formInputsMarkup}
+          {isAuthError && (
+            <AuthError
+              errorText={authErrorText}
+            />
+          )}
 
-      </fieldset>
-      <div className='auth-form__button-container'>
-        <SubmitButton
-          disabled={!formIsValid || isLoadingData}
-          settings={submitButtonSettings}
-          className='auth-form__submit-button'
-        />
-        <FormAuthQuestion
-          settings={formAuthQuestionSettings}
-        >
-          <RouteLink
-            linkPath={routeLinkSettings.linkPath}
-            linkTitle={routeLinkSettings.linkTitle}
+        </fieldset>
+        <div className='auth-form__button-container'>
+          <SubmitButton
+            disabled={!formIsValid || isLoadingData}
+            settings={submitButtonSettings}
+            className='auth-form__submit-button'
           />
-        </FormAuthQuestion>
-      </div>
-      {isLoadingData && (<Preloader />)}
-    </form>
+          <FormAuthQuestion
+            settings={formAuthQuestionSettings}
+          >
+            <RouteLink
+              linkPath={routeLinkSettings.linkPath}
+              linkTitle={routeLinkSettings.linkTitle}
+            />
+          </FormAuthQuestion>
+        </div>
+        {isLoadingData && (<Preloader />)}
+      </form>
   )
 }
 
