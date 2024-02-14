@@ -66,7 +66,6 @@ function AuthForm({
               errorText={authErrorText}
             />
           )}
-
         </fieldset>
         <div className='auth-form__button-container'>
           <SubmitButton
@@ -83,7 +82,7 @@ function AuthForm({
             />
           </FormAuthQuestion>
         </div>
-        {isLoadingData && (<Preloader />)}
+        {isLoadingData && (<Preloader/>)}
       </form>
   )
 }

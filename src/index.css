@@ -71,3 +71,7 @@
 @import url(./components/Footer/Footer.css);
 
 @import url(./components/NotFound/NotFound.css);
+
+@import url(./components/Notification/Notification.css);
+
+@import url(./components/FilterCheckbox/FilterCheckbox.css);

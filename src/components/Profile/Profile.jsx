@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import ProfileForm from '../ProfileForm/ProfileForm';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
-import useFormWithValidation from '../../hooks/useFormValidation';
+import useValidation from '../../utils/useValidation';
 import Header from '../Header/Header';
 
 function Profile({
@@ -12,10 +12,10 @@ function Profile({
   isLoadingUpdateCurrentUser,
 }) {
 
-  const currentUserData = React.useContext(CurrentUserContext);
-  const [isUpdateError, setIsUpdateUserProfileError] = React.useState(false);
-  const [updateErrorText, setUpdateUserProfileErrorText] = React.useState('');
-  const [formIsValid, setFormValid] = React.useState(false);
+  const currentUserData = useContext(CurrentUserContext);
+  const [isUpdateError, setIsUpdateUserProfileError] = useState(false);
+  const [updateErrorText, setUpdateUserProfileErrorText] = useState('');
+  const [formIsValid, setFormValid] = useState(false);
 
   const headerClass = 'header header__black';
   const headerAccountIconClass = 'header__account-icon-background header__account-icon-background-gray';
@@ -26,7 +26,7 @@ function Profile({
     isValid,
     handleChange,
     resetForm
-  } = useFormWithValidation({});
+  } = useValidation({});
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -35,7 +35,7 @@ function Profile({
     resetForm(currentUserData);
   };
 
-  const [isEdited, setIsEdited] = React.useState(false);
+  const [isEdited, setIsEdited] = useState(false);
 
   const handleToggleEditProfile = () => {
     setIsEdited(!isEdited);
@@ -55,37 +55,33 @@ function Profile({
       required: true,
       id: 'name',
       label: 'Имя',
-      placeholder: 'Имя',
+      placeholder: `${currentUserData.data ? currentUserData.data.name : ''}`,
       name: 'name',
       regexp: '[a-zA-Z -]{2,30}',
       customErrorMessage: 'Поле name может содержать только латиницу, пробел или дефис: a-zA-Z -',
     },
-
     {
       key: 2,
       name: 'email',
       label: 'E-mail',
-      placeholder: 'E-mail',
+      placeholder: `${currentUserData.data ? currentUserData.data.email : ''}`,
       type: 'email',
       id: 'email',
       required: true,
     },
   ];
 
-//  const TITLE_TEXT = `Привет, ${currentUserData.name || ''}!`;
-  const TITLE_TEXT = `Привет, Пользователь!`;
+  const TITLE_TEXT = `Привет, ${currentUserData.data ? currentUserData.data.name : values.name ? values.name : ''}!`;
 
-  React.useEffect(() => {
-    if (currentUserData) {
-      resetForm(currentUserData);
-    }
-  }, [currentUserData, resetForm])
+  useEffect(() => {
+    resetForm({email: currentUserData.email, name: currentUserData.name});
+}, [currentUserData, resetForm]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setFormValid(isValid);
   }, [isValid, values])
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (currentUserData.email === values.email && currentUserData.name === values.name) {
       setFormValid(false);
     }

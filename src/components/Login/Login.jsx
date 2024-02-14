@@ -1,8 +1,9 @@
 import React from 'react';
 import AuthForm from '../AuthForm/AuthForm';
-import useFormValidation from '../../hooks/useFormValidation';
+import useValidation from '../../utils/useValidation';
 
 function Login({
+  onLogin,
   isLoadingSignin,
  }) {
 
@@ -11,7 +12,12 @@ function Login({
     errors,
     isValid,
     handleChange
-  } = useFormValidation({});
+  } = useValidation({});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onLogin(values);
+  };
 
   const ROUTE_LINK = {
     linkTitle: 'Регистрация',
@@ -21,10 +27,6 @@ function Login({
   const SUBMIT_BUTTON = {
     type: 'submit',
     title: 'Войти',
-  };
-
-  const QUESTION_TEXT = {
-    questionText: 'Ещё не зарегистрированы?',
   };
 
   const INPUTS_DATA = [
@@ -62,9 +64,10 @@ function Login({
             titleText='Рады видеть!'
             inputsData={INPUTS_DATA}
             submitButtonSettings={SUBMIT_BUTTON}
-            formAuthQuestionSettings={QUESTION_TEXT}
+            formAuthQuestionSettings='Ещё не зарегистрированы?'
             routeLinkSettings={ROUTE_LINK}
             onChange={handleChange}
+            onSubmit={handleSubmit}
             values={values}
             errors={errors}
             formIsValid={isValid}

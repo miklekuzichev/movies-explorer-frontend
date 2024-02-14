@@ -6,7 +6,6 @@ function ProtectedRoute({
   redirectTo,
   ...props
 }) {
-
   return (
     props.loggedIn ? (
         <Component

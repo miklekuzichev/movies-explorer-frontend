@@ -9,10 +9,10 @@
   font-style: normal;
   font-size: 22px;
   line-height: 1.22;
-  background-color: #202020;
-  color: #fff;
   text-align: center;
   box-sizing: border-box;
+  background-color: #202020;
+  color: #fff;
 }
 
 @media screen and (max-width: 1023px) {

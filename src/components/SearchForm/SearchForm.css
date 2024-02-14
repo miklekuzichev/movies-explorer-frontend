@@ -120,91 +120,55 @@
   }
 }
 
-/* CSS стили для search__short */
+/* CSS стили для searchform__input-error */
 
-.search__short {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-  padding-top: 28px;
-  max-width: 1140px;
+.searchform__input-error {
+  display: none;
 }
 
-@media screen and (max-width: 320px) {
-  .search__short {  
-      padding-top: 30px;
-  }
-}
-
-.search__switch {
-  position: relative;
-  display: inline-flex;
-  width: 36px;
-  height: 20px;
-}
-
-.search__short-input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.search__short-slider {
-  position: absolute;
-  transition: .3s;
-  transition-timing-function: ease-in-out;
-  background-color: #3DDC84;
-  border-radius: 100px;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.search__short-slider:hover {
-  opacity: 0.8;
-  transition: 0.3s linear;
-}
-
-.search__short-slider::before {
-  position: absolute;
-  transition: .3s;
-  transition-timing-function: ease-in-out;
-  content: "";
-  height: 8px;
-  width: 8px;
-  left: 6px;
-  bottom: 6px;
-  background-color: #fff;
-  transform: translateX(16px);
-  border-radius: 50%;
-  background-position: 50%;
-  background-size: 12px;
-  background-repeat: no-repeat;
-  box-shadow: 0 2.395px 0.798px rgba(0,0,0,.06), 0 2.395px 6.386px rgba(0,0,0,.15);
-  will-change: transform;
-}
-
-/* CSS стили для search__short-text */
-
-.search__short-text {
-  margin: 0;
-  padding-left: 14px;
-  color: #FFF;
+.searchform__input-error_active {
+  display: block;
   font-family: 'Inter', 'Arial', 'sans-serif';
-  font-size: 13px;
+  font-size: 10px;
+  line-height: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 138.462% */
+  color: #FF4062;
+  position: absolute;
+  left: 52px;
+  top: 150px;
 }
 
-@media screen and (max-width: 320px) {
-  .search__short-text {  
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0em;
+@media screen and (max-width: 1184px) {
+  .searchform__input-error_active {
+    left: 51px;
+    top: 147px;
   }
+}
+
+@media screen and (max-width: 900px) {
+  .searchform__input-error_active {
+    width: calc(100% - 365px);
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .searchform__input-error_active {
+    top: 149px;
+    left: 79px;
+    width: calc(100% - 118px);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .searchform__input-error_active {
+    top: 140px;
+    left: 62px;
+    width: calc(100% - 118px);
+  }
+}
+
+.search__button_disabled {
+  opacity: 0.7;
+  pointer-events: none;
 }

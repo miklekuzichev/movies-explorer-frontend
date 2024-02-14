@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AuthForm from '../AuthForm/AuthForm';
-import useFormWithValidation from '../../hooks/useFormValidation';
+import useValidation from '../../utils/useValidation';
+import { REGISTRATION_ERRORS } from '../../constants/constants';
 
 function Register({
   isLoadingSignup,
+  onRegister,
+  regResStatus,
 }) {
 
-  const isRegistrationError = false;
-  const registrationErrorText = '';
+  const [isRegistrationError, setIsRegistrationError] = useState(false);
+  const [registrationErrorText, setRegistrationErrorText] = useState('');
 
   const {
     values,
     errors,
     isValid,
     handleChange,
-  } = useFormWithValidation({});
+    resetForm
+  } = useValidation({});
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    onRegister(values);
+  };
 
   const INPUTS_DATA = [
     {
@@ -64,9 +73,33 @@ function Register({
     linkPath: '/signin',
   };
 
-  const QUESTION_TEXT = {
-    questionText: 'Уже зарегистрированы?',
+  const errorHandler = () => {
+    if (regResStatus) {
+      switch (regResStatus) {
+        case 409:
+          setRegistrationErrorText(REGISTRATION_ERRORS.CONFLICT_EMAIL);
+          setIsRegistrationError(true);
+          break;
+        case 400:
+          setRegistrationErrorText(REGISTRATION_ERRORS.BAD_REQUEST);
+          setIsRegistrationError(true);
+          break;
+        case 200:
+          setRegistrationErrorText('');
+          setIsRegistrationError(false);
+          resetForm();
+          break;
+        default:
+          setRegistrationErrorText(REGISTRATION_ERRORS.BAD_REQUEST);
+          setIsRegistrationError(true);
+          break;
+      };
+    };
   };
+
+  useEffect(() => {
+    errorHandler();
+  }, [regResStatus]);
 
   return (
     <main
@@ -77,10 +110,11 @@ function Register({
           titleText='Добро пожаловать!'
           inputsData={INPUTS_DATA}
           onChange={handleChange}
+          onSubmit={handleSubmit}
           values={values}
           errors={errors}
           submitButtonSettings={SUBMIT_BUTTON_SETTINGS}
-          formAuthQuestionSettings={QUESTION_TEXT}
+          formAuthQuestionSettings='Уже зарегистрированы?'
           routeLinkSettings={ROUTE_LINK_SETTINGS}
           formIsValid={isValid}
           authErrorText={registrationErrorText}
