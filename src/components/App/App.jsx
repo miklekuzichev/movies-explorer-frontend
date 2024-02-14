@@ -15,7 +15,6 @@ import Login from '../Login/Login';
 import Profile from '../Profile/Profile';
 import NotFound from '../NotFound/NotFound';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import Preloader from '../Preloader/Preloader';
 import Menu from '../Menu/Menu';
 import mainApi from '../../utils/MainApi';
 import moviesApi from '../../utils/MoviesApi';
@@ -24,7 +23,6 @@ import { SHORT_MOVIE_DURATION } from '../../constants/constants';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') ||  false);
-  const [isLoadingData, setIsLoadingData] = useState(true);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [currentUserData, setCurrentUserData] = useState({});
   const [isLoadingSignup, setIsLoadingSignup] = useState(false);
@@ -371,14 +369,6 @@ if (token) {
 }
 }, [loggedIn])
 
-  useEffect(() => {
-    const handleWindowLoad = () => {
-      setIsLoadingData(false);
-    };
-    window.addEventListener('load', handleWindowLoad);
-    return () => window.removeEventListener('load', handleWindowLoad);
-  }, [])
-
   return (
     <CurrentUserContext.Provider value={currentUserData}>
       <div className='app'>
@@ -387,14 +377,10 @@ if (token) {
             exact
             path='/'
             element={
-                isLoadingData ? (
-                    <Preloader />
-                  ) : (
-                    <Main
-                      loggedIn={loggedIn}
-                      setOpenMenu={setOpenMenu}
-                    />
-                  )
+              <Main
+                loggedIn={loggedIn}
+                setOpenMenu={setOpenMenu}
+              />
             }
           />
           <Route
@@ -465,7 +451,7 @@ if (token) {
                     <Register
                         onRegister={handleRegister}
                         regResStatus={registrationResStatus}
-                        isLoadingSignup={isLoadingSignup || isLoadingData || isLoadingSignin}
+                        isLoadingSignup={isLoadingSignup || isLoadingSignin}
                     />
                 }
             />
@@ -473,7 +459,7 @@ if (token) {
                 path='/signin'
                 element={
                     <Login
-                        isLoadingSignin={isLoadingData}
+                        isLoadingSignin={isLoadingSignup || isLoadingSignin}
                         onLogin={handleLogin}
                         authResStatus={authResStatus}
                         tokenResStatus={tokenAuthResStatus}
