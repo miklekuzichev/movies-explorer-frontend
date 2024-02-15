@@ -26,7 +26,7 @@ function SavedMovies({
   const [isMoviesApiError, setIsMoviesApiError] = useState(false);
   const headerClass = 'header header__black';
   const headerAccountIconClass = 'header__account-icon-background header__account-icon-background-gray';
-  
+
   const handleSubmit = (data) => {
     handleSearchSavedMoviesData(data);
   }

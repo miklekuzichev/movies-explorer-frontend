@@ -65,7 +65,6 @@ class MainApi {
     };
 
     saveMovie(data, token) {
-        console.log('saveMovie ', data);
       return fetch(`${this._url}/movies`, {
         method: 'POST',
         headers: {

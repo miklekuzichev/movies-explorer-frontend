@@ -1,23 +1,22 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import MoviesButton from '../MoviesButton/MoviesButton';
 import { getFullImageUrl, getTrailerUrl } from '../../utils/getUrl';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 
 function MoviesCard({
   data,
-  onSaveFilm,
-  onDeleteFilm,
   locationPathname,
   onSaveMovie,
   onDeleteSavedMovie,
 }) {
-
   const currentUserData = useContext(CurrentUserContext);
   const convertTime = (durationMinutes) => {
-    const hours = Math.floor(durationMinutes / 60);
-    const minutes = Math.floor(durationMinutes % 60);
-    return `${hours}ч ${minutes}м`;
-  }
+  const hours = Math.floor(durationMinutes / 60);
+  const minutes = Math.floor(durationMinutes % 60);
+
+  return `${hours}ч ${minutes}м`;
+}
 
   const [movieData, setMovieData] = useState({
     country: data.country || 'Нет данных',
@@ -47,20 +46,18 @@ function MoviesCard({
   };
 
   return (
-      <li className="films__container-item">
+      <>
         <div className="films__container-title">
-          <a className="films__container-text" href={movieData.trailerLink} target="_blank" rel="noreferrer">{movieData.nameRU || movieData.nameEN}</a>
+          <Link className="films__container-text" target="_blank" rel="noreferrer" to={movieData.trailerLink}>{movieData.nameRU || movieData.nameEN}</Link>
           <span className="films__container-time">{convertTime(movieData.duration)}</span>
         </div>
         <img src={movieData.image} alt={movieData.nameRU || movieData.nameEN} className="films__container-image"/> 
           <MoviesButton
-          onSaveFilm={onSaveFilm}
-          onDeleteFilm={onDeleteFilm}
           onClick={handleClickFavoriteButton}
           isSaved={data.saved}
           locationPathname={locationPathname}
           />
-      </li>
+      </>
   )
 }
 

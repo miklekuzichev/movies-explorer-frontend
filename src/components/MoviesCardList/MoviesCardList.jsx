@@ -59,6 +59,7 @@ function MoviesCardList({
   const moviesCardsMarkup = moviesToRender.map((item) => (
     <li
       key={item._id || item.id}
+      className="films__container-item"
     >
       <MoviesCard
         data={item}

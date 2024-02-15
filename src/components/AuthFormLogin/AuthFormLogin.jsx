@@ -1,6 +1,6 @@
 import React from 'react';
 import FormTitle from '../FormTitle/FormTitle';
-import InputField from '../InputField/InputField';
+
 import SubmitButton from '../SubmitButton/SubmitButton';
 import Logo from '../Logo/Logo';
 import FormAuthQuestion from '../FormAuthQuestion/FormAuthQuestion';
@@ -8,9 +8,8 @@ import Preloader from '../Preloader/Preloader';
 import AuthError from '../AuthError/AuthError';
 import RouteLink from '../RouteLink/RouteLink';
 
-function AuthForm({
+function AuthFormLogin({
   titleText,
-  inputsData,
   onChange,
   values,
   errors,
@@ -23,28 +22,6 @@ function AuthForm({
   isAuthError,
   isLoadingData,
 }) {
-
-  const formInputsMarkup = inputsData.map((item) => (
-    <div
-      key={item.key}
-      className='auth-form__input-container'>
-      <label className='auth-form__input-label'>
-        {item.label}
-        <InputField
-          className='auth-form__input'
-          settings={item}
-          onChange={onChange}
-          value={values[item.name]}
-        />
-      </label>
-      <span
-        className='auth-form__input-error'
-        aria-live="polite">
-        {item.regexp && errors[item.name] && item.customErrorMessage}
-        {errors[item.name]}
-      </span>
-    </div>
-  ));
 
   return (
       <form
@@ -60,7 +37,55 @@ function AuthForm({
         <fieldset
           className='auth-form__input-fieldset'
           disabled={isLoadingData}>
-          {formInputsMarkup}
+
+          <div
+            key={1}
+            className='auth-form__input-container'>
+            <label className='auth-form__input-label'>
+              E-mail
+                <input
+                  className='auth-form__input'
+                  type='email'
+                  id='email'
+                  value={values['email'] || ''}
+                  pattern='^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$'
+                  placeholder='E-mail'
+                  name='email'
+                  onChange={onChange}
+                  required
+                />
+            </label>
+            <span
+              className='auth-form__input-error'
+              aria-live="polite">
+              {errors['email']}
+            </span>
+          </div>
+          <div
+            key={2}
+            className='auth-form__input-container'>
+            <label className='auth-form__input-label'>
+              Пароль
+                <input
+                  className='auth-form__input'
+                  type='password'
+                  id='password'
+                  minLength='8'
+                  maxLength='30'
+                  value={values['password'] || ''}
+                  placeholder='Пароль'
+                  name='password'
+                  onChange={onChange}
+                  required
+                />
+            </label>
+            <span
+              className='auth-form__input-error'
+              aria-live="polite">
+              {errors['password']}
+            </span>
+          </div>
+
           {isAuthError && (
             <AuthError
               errorText={authErrorText}
@@ -87,4 +112,4 @@ function AuthForm({
   )
 }
 
-export default AuthForm;
+export default AuthFormLogin;

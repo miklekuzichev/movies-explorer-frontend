@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {
   Route,
   Routes,
@@ -45,6 +45,7 @@ function App() {
   const [isCheckboxActive, setIsCheckboxActive] = useState(false);
   const [isCheckboxActiveSave, setIsCheckboxActiveSave] = useState(false);
   const [searchRequest, setSearchRequest] = useState({});
+  const [errorMessage, setErrorMessage] = useState('');
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -79,6 +80,8 @@ function App() {
     return initialSavedMoviesIds;
   };
 
+  
+
   const markAsSaved = (foundMoviesArr) => {
     const initialSavedMoviesIdsArr = getInitialSavedMoviesIds();
     foundMoviesArr.forEach((foundMovie) => {
@@ -94,6 +97,9 @@ function App() {
     })
     return foundMoviesArr;
   }
+
+
+
 
   const handleSearchSavedMoviesData = (searchQueries = {}, isAfterDelete = false) => {
     const token = localStorage.getItem('jwt');
@@ -118,7 +124,8 @@ function App() {
           } else {
             setIsNoSavedMoviesFound(false);
           }
-          setFoundSavedMoviesData(filteredSavedMovies)
+          setFoundSavedMoviesData(filteredSavedMovies);
+          setShortMoviesDataSave(handleFilter(filteredSavedMovies));
         })
         .catch((err) => {
           console.log(err);
@@ -249,17 +256,19 @@ const handleLogin = (data) => {
 // Ручка обновления текущего пользователя
 //
 const handleUpdateCurrenUser = (data) => {
+
   const token = localStorage.getItem('jwt');
   if (token) {
     setIsLoadingUpdateCurrentUser(true);
     mainApi.updateCurrentUserProfile(data, token)
       .then((res) => {
+
         setCurrentUserData(res.data);
-        setUpdateCurrentUserResStatus(res.status);
+        setUpdateCurrentUserResStatus('Данные успешно обновлены!');
         localStorage.setItem('currentUserData', JSON.stringify(res.data));
       })
       .catch((err) => {
-        setUpdateCurrentUserResStatus(err);
+        setUpdateCurrentUserResStatus(err.message);
       })
       .finally(() => {
         setIsLoadingUpdateCurrentUser(false);
@@ -285,14 +294,15 @@ const markAsUnsaved = (id) => {
 const handleSaveFavoriteMovie = (data) => {
   const token = localStorage.getItem('jwt');
   if (token) {
-    mainApi.saveMovie(data, token)
+    mainApi.saveMovie(data, token) //moviesData
       .then((res) => {
+        setFoundSavedMoviesData([res.data.data, ...foundSavedMoviesData]);
       })
       .catch((err) => {
         console.log(err);
       })
       .finally(() => {
-        handleSearchSavedMoviesData();
+
       })
   } else {
       navigate('/signin');
@@ -303,21 +313,28 @@ const handleSaveFavoriteMovie = (data) => {
 //
 const handleDeleteSavedMovie = (id) => {
   const token = localStorage.getItem('jwt');
-
   if (token) {
     mainApi.deleteSavedMovie(id, token)
       .then((res) => {
         markAsUnsaved(id);
+        if(isCheckboxActiveSave) {
+          const restShortSavedMovies = shortMoviesDataSave.filter((item) => item._id !== id);
+          setShortMoviesDataSave(restShortSavedMovies);
+
+        } else {
+          const restSavedMovies = foundSavedMoviesData.filter((item) => item._id !== id);
+          setFoundSavedMoviesData(restSavedMovies);
+        }
       })
       .catch((err) => {
         console.log(err);
       })
       .finally(() => {
-        const isAfterDelete = true;
-        handleSearchSavedMoviesData(isAfterDelete);
       })
   };
 }
+
+
 
 function checkLastRequest() {
   const lastRequestedCheckboxState = localStorage.getItem('checkboxState');
@@ -335,6 +352,18 @@ useEffect(() => {
   checkLastRequest();
 }, []);
 
+// Очищаем уведомление об успешном сохранении профиля
+//
+const resetErrMessage = useCallback((clearMessage='') => {
+  setErrorMessage(clearMessage)
+}, [setErrorMessage])
+
+useEffect(() => {
+  resetErrMessage();
+}, [resetErrMessage, navigate]);
+
+// Получаем фильмы по апи
+//
 useEffect(() => {
 checkToken();
 const token = localStorage.getItem('jwt');
@@ -389,7 +418,7 @@ if (token) {
             element={
               <ProtectedRoute
                         component={Movies}
-                        redirectTo={'/signin'}
+                        redirectTo={'/'}
                         loggedIn={loggedIn}
                         setOpenMenu={setOpenMenu}
                         isNoMoviesFound={isNoMoviesFound}
@@ -413,7 +442,7 @@ if (token) {
                 element={
                     <ProtectedRoute
                         component={SavedMovies}
-                        redirectTo={'/signin'}
+                        redirectTo={'/'}
                         loggedIn={loggedIn}
                         setOpenMenu={setOpenMenu}
                         isLoadingData={isLoadingMoviesData}
@@ -441,7 +470,8 @@ if (token) {
                         onUpdateCurrentUser={handleUpdateCurrenUser}
                         isLoadingUpdateCurrentUser={isLoadingUpdateCurrentUser}
                         updUserResStatus={updateCurrentUserResStatus}
-                        redirectTo={'/signin'}
+                        errorMessage={errorMessage}
+                        redirectTo={'/'}
                         component={Profile}/>
                 }
             />
@@ -449,8 +479,10 @@ if (token) {
                 path='/signup'
                 element={
                     <Register
+                        loggedIn={loggedIn}
                         onRegister={handleRegister}
                         regResStatus={registrationResStatus}
+                        errorMessage={errorMessage}
                         isLoadingSignup={isLoadingSignup || isLoadingSignin}
                     />
                 }
@@ -459,9 +491,11 @@ if (token) {
                 path='/signin'
                 element={
                     <Login
+                        loggedIn={loggedIn}
                         isLoadingSignin={isLoadingSignup || isLoadingSignin}
                         onLogin={handleLogin}
                         authResStatus={authResStatus}
+                        errorMessage={errorMessage}
                         tokenResStatus={tokenAuthResStatus}
                     />
                 }

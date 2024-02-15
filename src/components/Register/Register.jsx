@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import AuthForm from '../AuthForm/AuthForm';
+import { Navigate } from "react-router-dom";
+import AuthFormRegister from '../AuthFormRegister/AuthFormRegister';
 import useValidation from '../../utils/useValidation';
 import { REGISTRATION_ERRORS } from '../../constants/constants';
 
 function Register({
+  loggedIn,
   isLoadingSignup,
   onRegister,
   regResStatus,
@@ -24,45 +26,7 @@ function Register({
     evt.preventDefault();
     onRegister(values);
   };
-
-  const INPUTS_DATA = [
-    {
-      key: 1,
-      required: true,
-      type: 'text',
-      id: 'name',
-      regexp: '[a-zA-Z -]{2,30}',
-      label: 'Имя',
-      customErrorMessage: 'Поле name может содержать только латиницу, пробел или дефис: a-zA-Z -',
-      placeholder: 'Имя',
-      name: 'name',
-    },
-    {
-      key: 2,
-      required: true,
-      type: 'email',
-      id: 'email',
-      inputClassName: '',
-      labelClassName: '',
-      label: 'E-mail',
-      placeholder: 'E-mail',
-      name: 'email',
-    },
-    {
-      key: 3,
-      required: true,
-      type: 'password',
-      label: 'Пароль',
-      minLength: 8,
-      maxLength: 30,
-      placeholder: 'Пароль',
-      id: 'password',
-      inputClassName: '',
-      labelClassName: '',
-      name: 'password',
-    },
-  ];
-
+  
   const SUBMIT_BUTTON_SETTINGS = {
     type: 'submit',
     title: 'Зарегистрироваться',
@@ -101,14 +65,15 @@ function Register({
     errorHandler();
   }, [regResStatus]);
 
-  return (
+  return loggedIn ? (
+    <Navigate to="/" replace />
+  ) : (
     <main
       className='register'
     >
       <section>
-        <AuthForm
+        <AuthFormRegister
           titleText='Добро пожаловать!'
-          inputsData={INPUTS_DATA}
           onChange={handleChange}
           onSubmit={handleSubmit}
           values={values}
