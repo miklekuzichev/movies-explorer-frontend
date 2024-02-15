@@ -262,7 +262,6 @@ const handleUpdateCurrenUser = (data) => {
     setIsLoadingUpdateCurrentUser(true);
     mainApi.updateCurrentUserProfile(data, token)
       .then((res) => {
-
         setCurrentUserData(res.data);
         setUpdateCurrentUserResStatus('Данные успешно обновлены!');
         localStorage.setItem('currentUserData', JSON.stringify(res.data));
@@ -302,7 +301,7 @@ const handleSaveFavoriteMovie = (data) => {
         console.log(err);
       })
       .finally(() => {
-
+        
       })
   } else {
       navigate('/signin');
@@ -317,14 +316,10 @@ const handleDeleteSavedMovie = (id) => {
     mainApi.deleteSavedMovie(id, token)
       .then((res) => {
         markAsUnsaved(id);
-        if(isCheckboxActiveSave) {
-          const restShortSavedMovies = shortMoviesDataSave.filter((item) => item._id !== id);
-          setShortMoviesDataSave(restShortSavedMovies);
-
-        } else {
-          const restSavedMovies = foundSavedMoviesData.filter((item) => item._id !== id);
-          setFoundSavedMoviesData(restSavedMovies);
-        }
+        const restShortSavedMovies = shortMoviesDataSave.filter((item) => item._id !== id);
+        const restSavedMovies = foundSavedMoviesData.filter((item) => item._id !== id);
+        setShortMoviesDataSave(restShortSavedMovies);
+        setFoundSavedMoviesData(restSavedMovies);
       })
       .catch((err) => {
         console.log(err);

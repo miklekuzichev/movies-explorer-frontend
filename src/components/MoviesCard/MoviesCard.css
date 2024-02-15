@@ -34,11 +34,14 @@
 /* CSS стили для films__container-text */
 
 .films__container-text {
+  max-width: 270px;
   margin: 0;
   padding: 0;
   display: flex;
   color: #FFF;
   font-family: 'Inter';
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
