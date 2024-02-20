@@ -1,0 +1,104 @@
+/* CSS стили для student__portfolio-links */
+
+.student__portfolio-links {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 86px;
+    list-style: none;
+}
+
+@media screen and (max-width: 1184px) {
+    .student__portfolio-links {
+        padding-bottom: 52px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .student__portfolio-links {
+        padding-bottom: 50px;
+    }
+}
+
+/* CSS стили для student__portfolio-link */
+
+.student__portfolio-link {
+    margin: 0;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #424242; 
+}
+
+.student__portfolio-link:last-of-type {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 1184px) {
+    .student__portfolio-link {
+        border-bottom: solid 1px #E6E6E6;
+    }
+}
+
+/* CSS стили для student__portfolio-title */
+
+.student__portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
+    color: #FFF;
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+    list-style-type: none;
+    text-decoration: none;
+    transition: opacity 0.4s linear;
+    cursor: pointer;
+}
+
+.student__portfolio-title:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1184px) {
+    .student__portfolio-title {
+        padding-top: 0;
+        font-size: 28px;
+        line-height: 50px;
+        letter-spacing: -1.12px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .student__portfolio-title {
+        padding: 0 0 19px 0;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.72px;
+    }
+}
+
+/* CSS стили для student__portfolio-arrow */
+
+.student__portfolio-arrow {
+    margin: 0;
+    /*background-image: url(../../images/Portfolio/arrow.svg);*/
+    padding: 0 ;
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    color: #fff;
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 700px) {
+    .student__portfolio-arrow {
+        font-size: 18px;
+        line-height: 28px;
+        padding-right: 2px;
+    }
+}

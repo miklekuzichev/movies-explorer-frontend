@@ -1,0 +1,34 @@
+/* CSS стили для mobile-account__nav_link */
+
+.mobile-account__nav-link {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .mobile-account__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-account__nav-link {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .mobile-account__nav-link-icon {
+    padding: 8px 7px;
+    background: #313131;
+    border-radius: 4px;
+    margin-left: 17px;
+  }
+}
+

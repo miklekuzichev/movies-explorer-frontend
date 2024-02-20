@@ -1,0 +1,13 @@
+/* CSS стили для register */
+
+.register {
+    height: 100vh;
+    background: #202020;
+  }
+  
+  @media screen and (max-width: 766px) {
+    .register {
+      padding: 0 30px;
+    }
+  }
+  

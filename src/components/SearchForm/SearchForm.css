@@ -1,0 +1,210 @@
+/* CSS стили для search */
+
+.search {
+  width: 100%;
+  margin: 0 auto;
+  background: #202020;
+}
+
+/* CSS стили для search__container */
+
+.search__container {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 69px;
+  padding-bottom: 42px;
+  max-width: 1140px;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+}
+
+@media screen and (max-width: 1184px) {
+  .search__container {
+    padding-top: 66px; 
+    max-width: 708px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search__container {  
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 51px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__container {
+    padding-top: 71px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 63px;
+  }
+}
+
+/* CSS стили для search__input */
+
+.search__input {
+  display: block;
+  width: 100%;
+  max-width: 1140px;
+  min-height: 71px;
+  padding: 0;
+  padding-left: 25px;
+  margin: 0;
+  color: white;
+  border-radius: 8px;
+  border: 1.5px solid rgba(170, 170, 170, 0.2);
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.search__input::placeholder {
+  color: #8B8B8B;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+}
+
+@media screen and (max-width: 378px) {
+      .search__input::placeholder {  
+        font-size: 16px;
+        line-height: 16px; /* 100% */
+      }
+
+      .search__input {
+        min-height: 55px;
+        padding-left: 12px;
+      }
+  }
+
+/* CSS стили для search__button */
+
+.search__button {
+  position: absolute;
+  top: 79px;
+  right: 9px;
+  width: 100px;
+  height: 52px;
+  border-radius: 5px;
+  border: none;
+  background: #4285F4;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+}
+
+.search__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .search__button { 
+    top: 75px; 
+    right: 39px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__button {
+    width: 80px;
+    height: 46px;  
+    right: 20px; 
+  }
+}
+
+/* CSS стили для search__short */
+
+.search__short {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  max-width: 1140px;
+}
+
+@media screen and (max-width: 320px) {
+  .search__short {  
+      padding-top: 30px;
+  }
+}
+
+.search__switch {
+  position: relative;
+  display: inline-flex;
+  width: 36px;
+  height: 20px;
+}
+
+.search__short-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.search__short-slider {
+  position: absolute;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  background-color: #3DDC84;
+  border-radius: 100px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.search__short-slider:hover {
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
+.search__short-slider::before {
+  position: absolute;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  content: "";
+  height: 8px;
+  width: 8px;
+  left: 6px;
+  bottom: 6px;
+  background-color: #fff;
+  transform: translateX(16px);
+  border-radius: 50%;
+  background-position: 50%;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  box-shadow: 0 2.395px 0.798px rgba(0,0,0,.06), 0 2.395px 6.386px rgba(0,0,0,.15);
+  will-change: transform;
+}
+
+/* CSS стили для search__short-text */
+
+.search__short-text {
+  margin: 0;
+  padding-left: 14px;
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 138.462% */
+}
+
+@media screen and (max-width: 320px) {
+  .search__short-text {  
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+}

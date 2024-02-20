@@ -1,0 +1,49 @@
+/* CSS стили для films__more-button */
+
+.films__more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1140px;
+  min-height: 36px;
+  background: #2F2F2F;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 6px;
+  border: none;
+  letter-spacing: 0.2px;
+}
+
+.films__more-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s linear;
+} 
+
+@media screen and (max-width: 1184px) {
+  .films__more-button {  
+    max-width: 668px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .films__more-button {  
+      margin-top: 70px;
+      max-width: 708px;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .films__more-button {  
+      max-width: 300px;
+  }
+}

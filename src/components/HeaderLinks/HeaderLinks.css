@@ -1,0 +1,113 @@
+/* CSS стили для header__links */
+
+.header__links {  
+  padding-top: 21px;
+  padding-bottom: 23px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+
+  .header__links {  
+    display: none;
+  }
+}
+
+/* CSS стили для header__link */
+
+.header__link {  
+  margin: 0;
+  margin-left: 21px;
+  text-decoration: none;
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.header__link:hover {
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
+@media screen and (max-width: 750px) {
+
+  .header__link {  
+      font-size: 18px;
+      line-height: 20px;
+  }
+}
+
+/* CSS стили для header__account */
+
+.header__account {  
+  padding-left: 50px;
+  max-width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__account:hover {  
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
+@media screen and (max-width: 750px) {
+  .header__account {  
+      margin-top: 30px;
+      margin-bottom: 8px;
+  }
+}
+
+
+
+
+/* CSS стили для header__account-text */
+
+.header__account-text {  
+  padding-right: 14px;
+  color: #FFF;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  text-decoration: none;
+}
+
+/* CSS стили для header__account-icon-background */
+
+.header__account-icon-background {  
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}
+
+/* CSS стили для header__account-icon-background-blue */
+
+.header__account-icon-background-blue {  
+  background: #0F4157;
+}
+
+/* CSS стили для header__account-icon-background-gray */
+
+.header__account-icon-background-gray {  
+  background: #313131;
+}
+
+/* CSS стили для header__account-icon */
+
+.header__account-icon {  
+  position: absolute;
+  inset: 30%;
+  width: 10px;
+  height: 10px;
+  background-image: url(../../images/Header/icon__COLOR_icon-main.svg);
+}

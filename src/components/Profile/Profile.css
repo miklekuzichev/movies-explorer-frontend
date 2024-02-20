@@ -1,0 +1,16 @@
+/* CSS стили для profile */
+
+.profile {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #202020;
+  }
+  
+  @media screen and (max-width: 766px) {
+    .profile {
+      padding: 0 30px;
+    }
+  }
+  

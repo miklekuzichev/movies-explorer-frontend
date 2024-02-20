@@ -1,0 +1,13 @@
+/* CSS стили для profile__update_error */
+
+.profile__update_error {
+  padding: 20px 0;
+  display: block;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.18;
+  color: #EE3465;
+}

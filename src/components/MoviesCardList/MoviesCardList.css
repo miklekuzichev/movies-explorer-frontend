@@ -1,0 +1,45 @@
+/* CSS стили для films */
+
+.films {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  background: #202020;
+}
+
+/* CSS стили для films__container */
+
+.films__container {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 79px;
+  padding-bottom: 11px;
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;/*repeat(3, 213px);*/
+  box-sizing: border-box;
+  gap: 32px;
+  list-style: none;
+}
+
+@media screen and (max-width: 1184px) {
+  .films__container {
+      max-width: 768px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .films__container {
+      max-width: 320px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+      padding-top: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+}

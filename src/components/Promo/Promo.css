@@ -1,0 +1,190 @@
+/* CSS стили для promo */
+
+.promo {
+  width: 100%;
+  margin: 0 auto;
+  background: #073042;
+}
+
+/* CSS стили для promo__container */
+
+.promo__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 47px;
+  display: flex;
+  justify-content: space-between;
+  background: #073042;
+}
+
+@media screen and (max-width: 1184px) {
+.promo__container {
+  flex-direction: column-reverse;
+  padding-bottom: 86px;  
+}
+}
+
+@media screen and (max-width: 700px) {
+.promo__container {
+  padding-bottom: 30px;  
+}
+}
+
+/* CSS стили для promo__content */
+
+.promo__content {
+  margin: 0;
+  padding-top: 75px;
+}
+
+@media screen and (max-width: 1184px) {
+  .promo__content {
+    margin: 0 auto;
+    padding-top: 48px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .promo__content {
+    padding-top: 44px;
+  }
+}
+
+/* CSS стили для promo__title */
+
+.promo__title {
+  max-width: 640px;
+  margin: 0;
+  text-align: left;
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px; /* 116% */
+}
+
+@media screen and (max-width: 1184px) {
+  .promo__title {
+      max-width: 680px;
+      text-align: center;
+      font-size: 40px;
+      line-height: 50px; /* 125% */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .promo__title {
+      max-width: 300px;
+      font-size: 30px;
+      line-height: 38px; /* 126.667% */
+      letter-spacing: -1.2px;
+  }
+}
+
+/* CSS стили для promo__subtitle */
+
+.promo__subtitle {
+  margin: 0;
+  margin-top: 36px;
+  text-align: center; /* выравниваем текст по горизонтали внутри блока */
+  opacity: 0.5;
+  max-width: 310px;
+  text-align: left;
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1184px) {
+  .promo__subtitle {
+      margin: 22px auto 0 auto;
+      max-width: 260px;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .promo__subtitle {
+      margin-top: 24px;
+  }
+}
+
+/* CSS стили для promo__button */
+
+.promo__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 35px;
+  margin: 0;
+  margin-top: 146px;
+  text-decoration: none;
+  background: transparent;
+  color: #FFF;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, .6);
+}
+
+.promo__button:hover {
+  opacity: 0.8;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1184px) {
+  .promo__button {
+    margin: 92px auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+.promo__button {
+  margin-top: 80px;
+}
+}
+
+/* CSS стили для promo__image */
+
+.promo__image {
+  max-width: 310px;
+  margin: 0;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+
+  .promo__image {
+      max-width: 210px;
+  }
+}
+
+/* CSS стили для promo__figure */
+
+.promo__figure {
+  display: inline-block;
+  padding: 75px 0px 145px 0px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1184px) {
+  .promo__figure {
+    margin: 0 auto;
+    padding: 140px 0 0 0px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .promo__figure {
+    padding-top: 70px;
+  }
+}
