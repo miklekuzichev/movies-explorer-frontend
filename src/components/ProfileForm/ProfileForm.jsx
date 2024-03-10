@@ -1,6 +1,5 @@
 import React from 'react';
 import FormTitle from '../FormTitle/FormTitle';
-import InputField from '../InputField/InputField';
 import ProfileUpdateError from '../ProfileUpdateError/ProfileUpdateError.jsx';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import ProfileEditButton from '../ProfileEditButton/ProfileEditButton';
@@ -9,7 +8,6 @@ import Preloader from '../Preloader/Preloader';
 
 function ProfileForm({
   titleText,
-  inputsData,
   onChange,
   values,
   errors,
@@ -22,28 +20,10 @@ function ProfileForm({
   isLoadingData,
   onSubmit,
   submitButtonSettings,
-  formIsValid,
+  isValidForm,
   isUpdateUserProfileError,
+  updUserResStatus,
 }) {
-
-  const formInputs = inputsData.map((item) => (
-    <div
-      key={item.key}
-      className='profile__form-input-container'>
-      <label className='profile__form-input-label'>
-        {item.label}
-        <InputField
-          className='profile__form-input'
-          settings={item}
-          onChange={onChange}
-          value={values[item.name]}/>
-      </label>
-      <span
-        className='profile__form-input-error'>
-        {errors[item.name]}
-      </span>
-    </div>
-  ));
 
   return (
     <form
@@ -58,16 +38,67 @@ function ProfileForm({
       <fieldset
         className='profile__form-input-fieldset'
         disabled={isLoadingData || !isEdited}>
-        {formInputs}
+
+        <div
+          key={1}
+          className='profile__form-input-container'>
+          <label className='profile__form-input-label'>
+            Имя
+            <input
+              className='profile__form-input'
+              type='text'
+              id='name'
+              minLength='2'
+              maxLength='30'
+              value={values.data ? values.data['name'] : values['name'] || ''}
+              //value={values.email || ''}
+              pattern='^[A-Za-zА-Яа-яЁё\-\s]+$'
+              placeholder='Ваше имя'
+              name='name'
+              onChange={onChange}
+              required
+            />          
+          </label>
+          <span
+            className='profile__form-input-error'>
+            {errors['name'] && 'Поле name может содержать только латиницу, пробел или дефис: a-zA-Z -'}
+          </span>
+        </div>
+
+        <div
+          key={2}
+          className='profile__form-input-container'>
+          <label className='profile__form-input-label'>
+            E-mail
+            <input
+              className='profile__form-input'
+              type='email'
+              id='email'
+              minLength='2'
+              maxLength='30'
+              value={values.data ? values.data['email'] : values['email'] || ''}
+              placeholder='Ваш email'
+              name='email'
+              onChange={onChange}
+              required
+            />          
+          </label>
+          <span
+            className='profile__form-input-error'>
+            {errors['email']}
+          </span>
+        </div>
+
       </fieldset>
       <div className='profile__form-container'>
-        {isUpdateUserProfileError && (
+        {true && (
           <ProfileUpdateError 
-          errorText={profileUpdateErrorText}/>
+          errorText={updUserResStatus}/>
         )}
         {isEdited ? (
+
           <SubmitButton
-            disabled={!formIsValid}
+            disabled={!isValidForm}
             settings={submitButtonSettings}
             className='profile__form-submit-button'/>
         ) : (

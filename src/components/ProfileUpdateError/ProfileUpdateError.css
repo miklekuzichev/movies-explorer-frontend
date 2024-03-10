@@ -1,13 +1,28 @@
 /* CSS стили для profile__update_error */
 
 .profile__update_error {
-  padding: 20px 0;
+
+  position: absolute;
   display: block;
-  font-family: 'Inter', 'Arial', 'sans-serif';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 11px;
+  width: 410px;
+  top: 185px;
   text-align: center;
-  line-height: 1.18;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  font-style: normal;
+  font-weight: 400;
   color: #EE3465;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile__update_error {
+    top: 350px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .profile__update_error {
+    top: 185px;
+  }
 }

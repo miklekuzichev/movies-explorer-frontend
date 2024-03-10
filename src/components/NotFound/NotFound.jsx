@@ -6,7 +6,7 @@ function NotFound() {
   const navigate = useNavigate();
 
   const handleGoBackBtnClick = () => {
-    navigate('/');
+    navigate(-1);
   };
 
   const TEXT = '404';

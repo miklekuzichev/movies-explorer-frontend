@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeaderLinks = React.memo((props) => {
 
   return (
     <nav className="header__links">
-      <a href="/movies" className="header__link">Фильмы</a>
-      <a href="/saved-movies" className="header__link">Сохранённые фильмы</a>  
+      <Link className="header__link" to="/movies">Фильмы</Link>
+      <Link className="header__link" to="/saved-movies">Сохранённые фильмы</Link>
       <div className="header__account">
-        <a href="/profile" className="header__account-text">Аккаунт</a>
-        <a href="/profile" className={props.classNameIcon}><span className="header__account-icon"></span></a>
+        <Link className="header__account-text" to="/profile">Аккаунт</Link>
+        <Link className={props.classNameIcon} to="/profile"><span className="header__account-icon"></span></Link>
       </div>
     </nav>
   )

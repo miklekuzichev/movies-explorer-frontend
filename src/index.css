@@ -48,7 +48,7 @@
 
 @import url(./components/Register/Register.css);
 
-@import url(./components/AuthForm/AuthForm.css);
+@import url(./components/AuthFormRegister/AuthFormRegister.css);
 
 @import url(./components/AuthError/AuthError.css);
 
@@ -71,3 +71,7 @@
 @import url(./components/Footer/Footer.css);
 
 @import url(./components/NotFound/NotFound.css);
+
+@import url(./components/Notification/Notification.css);
+
+@import url(./components/FilterCheckbox/FilterCheckbox.css);

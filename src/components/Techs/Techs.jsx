@@ -9,10 +9,7 @@ function Techs() {
   return (
     <section className="technologies">
                 <div className="technologies__container">
-                    
-                        <h2 className="technologies__head-title">{INTRO_TITLE_TEXT}</h2>
-                    
-
+                    <h2 className="technologies__head-title">{INTRO_TITLE_TEXT}</h2>
                     <h3 className="technologies__title">{TECHNOLOGIES_TITLE_TEXT}</h3>
                     <p className="technologies__subtitle">{TECHNOLOGIES_SUBTITLE_TEXT}</p>
 

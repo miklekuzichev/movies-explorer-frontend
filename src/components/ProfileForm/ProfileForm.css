@@ -87,6 +87,9 @@
   box-sizing: border-box;
 }
 
+.profile__form-input::placeholder {
+  color: #fff;
+}
 /* CSS стили для profile__form-container */
 
 .profile__form-container {

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import ProfileForm from '../ProfileForm/ProfileForm';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
-import useFormWithValidation from '../../hooks/useFormValidation';
+import useValidation from '../../utils/useValidation';
 import Header from '../Header/Header';
 
 function Profile({
@@ -10,12 +10,15 @@ function Profile({
   onSignOut,
   onUpdateCurrentUser,
   isLoadingUpdateCurrentUser,
+  updUserResStatus,
+  errorMessage,
 }) {
 
-  const currentUserData = React.useContext(CurrentUserContext);
-  const [isUpdateError, setIsUpdateUserProfileError] = React.useState(false);
-  const [updateErrorText, setUpdateUserProfileErrorText] = React.useState('');
-  const [formIsValid, setFormValid] = React.useState(false);
+  const currentUserData = useContext(CurrentUserContext);
+
+  const [isUpdateError, setIsUpdateUserProfileError] = useState(false);
+  const [updateErrorText, setUpdateUserProfileErrorText] = useState('');
+  const [isValidForm, setFormValid] = useState(false);
 
   const headerClass = 'header header__black';
   const headerAccountIconClass = 'header__account-icon-background header__account-icon-background-gray';
@@ -26,7 +29,7 @@ function Profile({
     isValid,
     handleChange,
     resetForm
-  } = useFormWithValidation({});
+  } = useValidation({});
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -35,7 +38,7 @@ function Profile({
     resetForm(currentUserData);
   };
 
-  const [isEdited, setIsEdited] = React.useState(false);
+  const [isEdited, setIsEdited] = useState(false);
 
   const handleToggleEditProfile = () => {
     setIsEdited(!isEdited);
@@ -47,7 +50,7 @@ function Profile({
     type: 'submit',
     title: 'Сохранить',
   };
-
+/*
   const INPUT_DATA = [
     {
       key: 1,
@@ -55,39 +58,43 @@ function Profile({
       required: true,
       id: 'name',
       label: 'Имя',
-      placeholder: 'Имя',
+      placeholder: 'Ваше имя',
       name: 'name',
       regexp: '[a-zA-Z -]{2,30}',
       customErrorMessage: 'Поле name может содержать только латиницу, пробел или дефис: a-zA-Z -',
     },
-
     {
       key: 2,
       name: 'email',
       label: 'E-mail',
-      placeholder: 'E-mail',
+      placeholder: 'Ваш email',
       type: 'email',
       id: 'email',
       required: true,
     },
   ];
+*/
+  const TITLE_TEXT = `Привет, ${currentUserData.data ? currentUserData.data.name : currentUserData.name ? currentUserData.name : values.name ? values.name : ''}!`;
 
-//  const TITLE_TEXT = `Привет, ${currentUserData.name || ''}!`;
-  const TITLE_TEXT = `Привет, Пользователь!`;
-
-  React.useEffect(() => {
-    if (currentUserData) {
-      resetForm(currentUserData);
+  useEffect(() => {
+    if(currentUserData.data) {
+      resetForm({email: currentUserData.data.email, name: currentUserData.data.name});
+    }  else  {
+      resetForm({email: currentUserData.email, name: currentUserData.name});
     }
-  }, [currentUserData, resetForm])
 
-  React.useEffect(() => {
+    
+}, [currentUserData, resetForm]);
+
+  useEffect(() => {
     setFormValid(isValid);
   }, [isValid, values])
 
-  React.useEffect(() => {
-    if (currentUserData.email === values.email && currentUserData.name === values.name) {
-      setFormValid(false);
+  useEffect(() => {
+    if(currentUserData.data) {
+      if (currentUserData.data.email === values.email && currentUserData.data.name === values.name) {
+        setFormValid(false);
+      }
     }
   }, [currentUserData, values])
 
@@ -103,13 +110,13 @@ function Profile({
       <section className='profile'>
         <ProfileForm
           titleText={TITLE_TEXT}
-          inputsData={INPUT_DATA}
+          //inputsData={INPUT_DATA}
           onChange={handleChange}
           values={values}
           errors={errors}
           onSubmit={handleSubmit}
           submitButtonSettings={SUBMIT_SETTINGS}
-          formIsValid={formIsValid}
+          isValidForm={isValidForm}
           isEdited={isEdited}
           onToggleEditableProfile={handleToggleEditProfile}
           profileEditButtonSettings='Редактировать'
@@ -117,6 +124,7 @@ function Profile({
           profileUpdateErrorText={updateErrorText}
           isUpdateUserProfileError={isUpdateError}
           onSignOut={onSignOut}
+          updUserResStatus={updUserResStatus}
           isLoadingData={isLoadingUpdateCurrentUser}
         />
       </section>

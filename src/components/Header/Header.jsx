@@ -1,7 +1,5 @@
 import React from 'react';
-
 import AuthNavigation from '../AuthNavigation/AuthNavigation';
-
 import HeaderLinks from '../HeaderLinks/HeaderLinks';
 import Logo from '../Logo/Logo';
 import MenuButton from '../MenuButton/MenuButton';

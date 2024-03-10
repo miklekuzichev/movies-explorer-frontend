@@ -1,8 +1,11 @@
 import React from 'react';
-import AuthForm from '../AuthForm/AuthForm';
-import useFormValidation from '../../hooks/useFormValidation';
+import { Navigate } from "react-router-dom";
+import AuthFormLogin from '../AuthFormLogin/AuthFormLogin';
+import useValidation from '../../utils/useValidation';
 
 function Login({
+  loggedIn,
+  onLogin,
   isLoadingSignin,
  }) {
 
@@ -11,7 +14,12 @@ function Login({
     errors,
     isValid,
     handleChange
-  } = useFormValidation({});
+  } = useValidation({});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onLogin(values);
+  };
 
   const ROUTE_LINK = {
     linkTitle: 'Регистрация',
@@ -23,48 +31,19 @@ function Login({
     title: 'Войти',
   };
 
-  const QUESTION_TEXT = {
-    questionText: 'Ещё не зарегистрированы?',
-  };
-
-  const INPUTS_DATA = [
-    {
-      key: 1,
-      inputClassName: '',
-      labelClassName: '',
-      type: 'email',
-      id: 'email',
-      label: 'E-mail',
-      placeholder: 'E-mail',
-      name: 'email',
-      required: true,
-    },
-    
-    {
-      key: 2,
-      inputClassName: '',
-      labelClassName: '',
-      type: 'password',
-      id: 'password',
-      label: 'Пароль',
-      placeholder: 'Пароль',
-      name: 'password',
-      minLength: 8,
-      required: true,
-    },
-  ];
-
-  return (
+  return loggedIn ? (
+    <Navigate to="/" replace />
+  ) : (
     <main
       className='login'>
         <section>
-          <AuthForm
+          <AuthFormLogin
             titleText='Рады видеть!'
-            inputsData={INPUTS_DATA}
             submitButtonSettings={SUBMIT_BUTTON}
-            formAuthQuestionSettings={QUESTION_TEXT}
+            formAuthQuestionSettings='Ещё не зарегистрированы?'
             routeLinkSettings={ROUTE_LINK}
             onChange={handleChange}
+            onSubmit={handleSubmit}
             values={values}
             errors={errors}
             formIsValid={isValid}

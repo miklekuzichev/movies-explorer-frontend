@@ -26,13 +26,13 @@ function AboutProject() {
 
                     <div className="intro__stages-container">
                         <div className="intro__stages">
-                                <p class="intro__stage-text intro__stage-left intro__stage-text-black intro__stage-left-green">1 неделя</p> 
-                                <p class="intro__stage-text intro__stage-right intro__stage-text-white intro__stage-right-gray">4 недели</p> 
+                                <p className="intro__stage-text intro__stage-left intro__stage-text-black intro__stage-left-green">1 неделя</p> 
+                                <p className="intro__stage-text intro__stage-right intro__stage-text-white intro__stage-right-gray">4 недели</p> 
                         </div>
 
-                        <div class="intro__stages">
-                                <p class="intro__stage-text intro__stage-left intro__stage-text-gray">Back-end</p> 
-                                <p class="intro__stage-text intro__stage-right intro__stage-text-gray">Front-end</p> 
+                        <div className="intro__stages">
+                                <p className="intro__stage-text intro__stage-left intro__stage-text-gray">Back-end</p> 
+                                <p className="intro__stage-text intro__stage-right intro__stage-text-gray">Front-end</p> 
                         </div>
                     </div>
 
